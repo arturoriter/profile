@@ -1,0 +1,6 @@
+impor css files on index.tsx
+fixed menu and anchors issue
+responsive behavior in the menu (show only icons)
+tests I could write
+very simple layout improvements ideas
+image under src/img/ instead of public
