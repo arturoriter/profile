@@ -1,6 +1,7 @@
 import React from 'react';
 import Face from '../img/Face.png';
 import styled from 'styled-components';
+import BootstrapIcon from './BootstrapIcon';
 
 const FaceImage = styled.img`
   width: 80px;
@@ -8,13 +9,10 @@ const FaceImage = styled.img`
 
 const Contacts = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div id="contacts" className="text-center">
+      <FaceImage src={Face} />
       <div>
-        <FaceImage src={Face} />
-      </div>
-      <div>
-        <span className="fa fa-linkedin" />
-        &nbsp;
+        <BootstrapIcon name="linkedin" />
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -24,8 +22,7 @@ const Contacts = () => {
         </a>
       </div>
       <div>
-        <span className="fa fa-envelope" />
-        &nbsp;
+        <BootstrapIcon name="envelope" />
         <a
           target="_blank"
           rel="noopener noreferrer"

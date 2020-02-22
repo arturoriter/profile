@@ -1,5 +1,5 @@
 import React from 'react';
-import About from './components/About';
+import Header from './components/Header';
 import Summary from './components/Summary';
 import Skills from './components/Skills';
 import WorkExperience from './components/WorkExperience';
@@ -18,8 +18,8 @@ const AppContainer = styled.div`
 const App = () => {
   return (
     <AppContainer>
-      <About />
-      <div className="container col-12 col-md-8 col-xl-7 col-lg-8 col-xl-7">
+      <Header />
+      <div className="container col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-7">
         <Summary />
         <Skills />
         <WorkExperience />

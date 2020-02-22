@@ -1,57 +1,52 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-
 import styled from 'styled-components';
+import Contacts from './Contacts';
+import { Row, Col } from 'react-bootstrap';
 
-export const HeaderContainer = styled.div`
-  position: fixed;
-  top: 0;
-  width: 100%;
+const Name = styled.div`
+  font-size: 36pt;
+  text-align: center;
 `;
 
-const Header = () => {
+const JobTitle = styled.div`
+  font-size: 11pt;
+  text-align: center;
+  text-transform: uppercase;
+`;
+
+const PageContent = styled.div`
+  margin-bottom: 2em;
+  background-color: #b1d6dc;
+`;
+
+const About = () => {
   return (
-    <HeaderContainer>
-      <header>
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">
-            <span className="fa fa-home"></span>
-          </Navbar.Brand>
-          <Nav className="mr-auto">
-            <Nav.Link href="#summary">
-              <span className="fa fa-key"></span>
-              &nbsp; Summary
-            </Nav.Link>
-            <Nav.Link href="#skills">
-              <span className="fa fa-trophy"></span>
-              &nbsp; Skills
-            </Nav.Link>
-            <Nav.Link href="#experiences">
-              <span className="fa fa-rocket"></span>
-              &nbsp; Work Experience
-            </Nav.Link>
-            <Nav.Link href="#education">
-              <span className="fa fa-book"></span>
-              &nbsp;Education
-            </Nav.Link>
-            <Nav.Link href="#languages">
-              <span className="fa fa-globe"></span>
-              &nbsp; Languages
-            </Nav.Link>
-            <Nav.Link href="#footer">
-              <span className="fa fa-envelope"></span>
-              &nbsp;Contacts
-            </Nav.Link>
-            <Nav.Link href="#pageInfo">
-              <span className="fa fa-info"></span>
-              &nbsp;Page Info
-            </Nav.Link>
-          </Nav>
-        </Navbar>
-      </header>
-    </HeaderContainer>
+    <PageContent id="header">
+      <Row className="justify-content-md-center">
+        <Col
+          xs="12"
+          sm="8"
+          md="6"
+          lg="5"
+          xl="5"
+          style={{ alignSelf: 'center', lineHeight: '1' }}
+        >
+          <Name>ARTURO RITER</Name>
+          <JobTitle>Lead Senior Engineer / Senior Software Engineer</JobTitle>
+        </Col>
+        <Col
+          xs="12"
+          sm="4"
+          md="3"
+          lg="3"
+          xl="2"
+          style={{ marginTop: '0.5em', marginBottom: '0.5em' }}
+        >
+          <Contacts />
+        </Col>
+      </Row>
+    </PageContent>
   );
 };
 
-export default Header;
+export default About;

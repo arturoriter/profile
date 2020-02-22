@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import BootstrapIcon from './BootstrapIcon';
 
 const FooterContainer = styled.div`
   background: #303336;
@@ -12,8 +13,6 @@ const FooterContainer = styled.div`
 const Link = styled.a`
   font-size: 2em;
   color: #fff;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
 `;
 
 const Footer = () => {
@@ -25,25 +24,22 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="fa fa-linkedin-square" />
+          <BootstrapIcon name="linkedin-square" />
         </Link>
-        &nbsp;
         <Link
           href="https://github.com/arturoriter"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="fa fa-github-square" />
+          <BootstrapIcon name="github-square" />
         </Link>
-        &nbsp;
         <Link
           href="mailto:arturo.riter@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="fa fa-envelope" />
+          <BootstrapIcon name="envelope" />
         </Link>
-        &nbsp;
       </footer>
     </FooterContainer>
   );

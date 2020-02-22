@@ -1,12 +1,14 @@
 import React from 'react';
 import Title from './Title';
+import Row from 'react-bootstrap/Row';
+import { Col } from 'react-bootstrap';
 
 const Skills = () => {
   return (
     <div id="skills">
       <Title name="Skills" />
-      <div className="row">
-        <div className="col-12 col-sm-6">
+      <Row>
+        <Col sm="6">
           <li>Languages: Java, Groovy</li>
           <li>Cloud Computing: AWS</li>
           <li>Architecture: Event-Driven, Microservices, REST</li>
@@ -15,8 +17,8 @@ const Skills = () => {
           </li>
           <li>Ops tools: Terraform, Docker, Jenkins</li>
           <li>Build automation tools: Maven, Gradle, Yarn</li>
-        </div>
-        <div className="col-12 col-sm-6">
+        </Col>
+        <Col sm="6">
           <li>
             Frontend (beginner): React, Typescript, Styled Components, Jest,
             Webpack, Babel
@@ -27,8 +29,8 @@ const Skills = () => {
           </li>
           <li>Agile: Scrum, XP, Lean, Kaizen</li>
           <li>Code Quality: SonarQube, lint, OWASP</li>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </div>
   );
 };

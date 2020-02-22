@@ -6,7 +6,7 @@ const Languages = () => {
   return (
     <div id="languages">
       <Title name="Language Skills" />
-      <Table striped bordered hover style={{ lineHeight: 0.8 }}>
+      <Table striped bordered hover style={{ lineHeight: 0.7 }}>
         <thead>
           <tr>
             <th>Language</th>
