@@ -16,20 +16,18 @@ const AppContainer = styled.div`
 
 const App = () => {
   return (
-    <>
-      <AppContainer>
-        <About />
-        <div className="container">
-          <Summary />
-          <Skills />
-          <WorkExperience />
-          <Education />
-          <Languages />
-          <PageInfo />
-        </div>
-        <Footer />
-      </AppContainer>
-    </>
+    <AppContainer>
+      <About />
+      <div className="container col-12 col-md-9 col-xl-8 col-lg-9 col-xl-8">
+        <Summary />
+        <Skills />
+        <WorkExperience />
+        <Education />
+        <Languages />
+        <PageInfo />
+      </div>
+      <Footer />
+    </AppContainer>
   );
 };
 

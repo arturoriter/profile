@@ -8,11 +8,11 @@ const FaceImage = styled.img`
 
 const Contacts = () => {
   return (
-    <div>
-      <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: 'center' }}>
+      <div>
         <FaceImage src={Face} />
       </div>
-      <div style={{ textAlign: 'center' }}>
+      <div>
         <span className="fa fa-linkedin" />
         &nbsp;
         <a
@@ -23,7 +23,7 @@ const Contacts = () => {
           linkedin.com/in/arturoriter
         </a>
       </div>
-      <div style={{ textAlign: 'center' }}>
+      <div>
         <span className="fa fa-envelope" />
         &nbsp;
         <a
