@@ -1,34 +1,34 @@
 import React from 'react';
+import Title from './Title';
 
 const Skills = () => {
   return (
     <div id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Languages: Java, Groovy, Typescript</li>
-        <li>Frameworks: Spring Boot, Spring Cloud, React</li>
-        <li>Cloud Computing: AWS</li>
-        <li>Infrastructure as code: Terraform, CloudFormation</li>
-        <li>Docker</li>
-        <li>CI/CD: Jenkins</li>
-        <li>
-          Testing frameworks: Spock, Geb, Cucumber, Mockito, Wiremock, Jest
-        </li>
-        <li>Contract testing: Pact</li>
-        <li>Rest Web Service</li>
-        <li>Build automation Tools: Maven, Gradle, Yarn</li>
-        <li>Version-control system: GIT</li>
-        <li>Event-Driven Architecture</li>
-        <li>Agile: XP/Scrum/Kanban</li>
-        <li>Quality Assurance: lint, SonarQube, prettier</li>
-        <li>Database: JPA, jOOQ, flyway</li>
-      </ul>
-      AWS: SQS, SNS, SES, EC2, ECS, Lambda, Elastic Beanstalk, ECR, Fargate,
-      Dynamo DB, RDS, Aurora, ElastiCache, CloudWatch, CloudTrail, API Gateway,
-      ELB, CloudFormation, Cognito, Secrets Manager, Key Management Service, S3,
-      Glacier
-      <br />
-      <br />
+      <Title name="Skills" />
+      <div className="row">
+        <div className="col-12 col-sm-6">
+          <li>Languages: Java, Groovy</li>
+          <li>Cloud Computing: AWS</li>
+          <li>Architecture: Event-Driven, Microservices, REST</li>
+          <li>
+            Backend: Spring Boot, Spring Cloud, JPA, jOOQ, Flyway, Netflix Zuul
+          </li>
+          <li>Ops tools: Terraform, Docker, Jenkins</li>
+          <li>Build automation tools: Maven, Gradle, Yarn</li>
+        </div>
+        <div className="col-12 col-sm-6">
+          <li>
+            Frontend (beginner): React, Typescript, Styled Components, Jest,
+            Webpack, Babel
+          </li>
+          <li>
+            Testing frameworks: Spock, Geb, JUnit, Cucumber, Mockito, Wiremock,
+            Pact
+          </li>
+          <li>Agile: Scrum, XP, Lean, Kaizen</li>
+          <li>Code Quality: SonarQube, lint, OWASP</li>
+        </div>
+      </div>
     </div>
   );
 };

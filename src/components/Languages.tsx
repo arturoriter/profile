@@ -1,11 +1,12 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Title from './Title';
 
 const Languages = () => {
   return (
     <div id="languages">
-      <h2>Language</h2>
-      <Table striped bordered hover>
+      <Title name="Language Skills" />
+      <Table striped bordered hover style={{ lineHeight: 0.8 }}>
         <thead>
           <tr>
             <th>#</th>
@@ -22,7 +23,7 @@ const Languages = () => {
           <tr>
             <td>2</td>
             <td>English</td>
-            <td>Full professional proficiency</td>
+            <td>Fluent proficiency</td>
           </tr>
           <tr>
             <td>3</td>

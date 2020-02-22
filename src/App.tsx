@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './components/Header';
 import About from './components/About';
 import Summary from './components/Summary';
 import Skills from './components/Skills';
@@ -10,26 +9,26 @@ import PageInfo from './components/PageInfo';
 import Footer from './components/Footer';
 import styled from 'styled-components';
 
-export const AppContainer = styled.div`
-  margin-top: 3em;
-  padding: 2em;
+const AppContainer = styled.div`
   font-size: 0.8em;
+  font-family: 'Lato-Light', serif;
 `;
 
 const App = () => {
   return (
     <>
-      <Header />
       <AppContainer>
         <About />
-        <Summary />
-        <Skills />
-        <WorkExperience />
-        <Education />
-        <Languages />
-        <PageInfo />
+        <div className="container">
+          <Summary />
+          <Skills />
+          <WorkExperience />
+          <Education />
+          <Languages />
+          <PageInfo />
+        </div>
+        <Footer />
       </AppContainer>
-      <Footer />
     </>
   );
 };

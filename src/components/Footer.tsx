@@ -1,65 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const FooterContainer = styled.div`
-  overflow: hidden;
-  background: #343a40;
-  text-align: center;
+const FooterContainer = styled.div`
+  background: #303336;
   font-size: 0.8em;
   color: #fff;
-  display: flex;
-  height: 8em;
-  align-items: center;
-  justify-content: space-around;
+  text-align: center;
+  margin-top: 2em;
 `;
 
-export const SocialMediaIcon = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-`;
-
-export const ImageGitHub = styled.img`
-  width: 2rem;
-  background: #fff;
-  border-radius: 50%;
-`;
-
-export const ImageLinkedin = styled.img`
-  width: 2rem;
-  background: #fff;
-  border-radius: 5px;
+const Link = styled.a`
+  font-size: 2em;
+  color: #fff;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
 `;
 
 const Footer = () => {
   return (
     <FooterContainer id="footer">
       <footer>
-        <p>
-          <a href="mailto:arturo.riter@gmail.com">arturo.riter@gmail.com</a>
-        </p>
-        <SocialMediaIcon>
-          <a
-            href="https://github.com/arturoriter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ImageGitHub
-              src="https://img.icons8.com/ios-filled/50/000000/github.png"
-              alt="github"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/arturoriter/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ImageLinkedin
-              src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
-              alt="linkedin"
-            />
-          </a>
-        </SocialMediaIcon>
+        <Link
+          href="https://linkedin.com/in/arturoriter?trk=profile-badge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="fa fa-linkedin-square" />
+        </Link>
+        &nbsp;
+        <Link
+          href="https://github.com/arturoriter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="fa fa-github-square" />
+        </Link>
+        &nbsp;
+        <Link
+          href="mailto:arturo.riter@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="fa fa-envelope" />
+        </Link>
+        &nbsp;
       </footer>
     </FooterContainer>
   );

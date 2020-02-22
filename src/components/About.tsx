@@ -1,29 +1,37 @@
 import React from 'react';
-import face from '../img/Face.png';
 import styled from 'styled-components';
+import Contacts from './Contacts';
 
-export const FaceImage = styled.img`
-  width: 80px;
+const Name = styled.div`
+  font-size: 44pt;
+  text-align: center;
+`;
+
+const JobTitle = styled.div`
+  font-size: 11pt;
+  text-align: center;
+  text-transform: uppercase;
+`;
+
+const PageContent = styled.div`
+  margin-bottom: 2em;
+  background-color: #b1d6dc;
 `;
 
 const About = () => {
   return (
-    <div id="home">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <FaceImage src={face} alt="" />
-            </td>
-            <td>
-              <h2>Arturo Riter</h2>
-              <h5>Lead Senior Engineer</h5>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <br />
-    </div>
+    <PageContent>
+      <div
+        className="row container-fluid justify-content-around"
+        style={{ margin: '0' }}
+      >
+        <div>
+          <Name>ARTURO RITER</Name>
+          <JobTitle>Lead Senior Engineer / Senior Software Engineer</JobTitle>
+        </div>
+        <Contacts />
+      </div>
+    </PageContent>
   );
 };
 

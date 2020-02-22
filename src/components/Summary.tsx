@@ -3,13 +3,11 @@ import React from 'react';
 const Summary = () => {
   return (
     <div id="summary">
-      <h2>Summary</h2>
-      Bachelor’s degree in Computer Engineering. Several years of hands-on
-      experience as a developer. Enthusiastic of Agile Methodologies. Highly
-      motivated and committed to quality and excellence. Interested in
-      DevSecOps, cloud computing, infrastructure-as-a-code.
-      <br />
-      <br />
+      More than 18 years of hands-on experience as a Software Engineer in
+      different sectors. Bachelor's degree in Computer Engineering. Enthusiastic
+      about agile methodologies. Highly motivated and committed to quality and
+      excellence. Interested in DevSecOps, cloud computing and
+      infrastructure-as-a-code.
     </div>
   );
 };
