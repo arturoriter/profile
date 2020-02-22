@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TitleContainer = styled.div`
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 `;
 
 const Label = styled.div`
@@ -16,7 +16,11 @@ const Label = styled.div`
   font-family: 'Lato-Medium', serif;
 `;
 
-const Title = (props: any) => {
+export interface TitleType {
+  name: string;
+}
+
+const Title = (props: TitleType) => {
   return (
     <TitleContainer>
       <Label>{props.name}</Label>

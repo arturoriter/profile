@@ -5,7 +5,11 @@ const PageMargin = styled.div`
   margin-top: 2em;
 `;
 
-const LinkedinBadge = (props: any) => {
+export interface LinkedinBadgeType {
+  bg: string;
+}
+
+const LinkedinBadge = (props: LinkedinBadgeType) => {
   return (
     <PageMargin
       className="LI-profile-badge"

@@ -21,7 +21,7 @@ const PageContent = styled.div`
 const About = () => {
   return (
     <PageContent>
-      <div className="container col-12 col-md-9 col-xl-8">
+      <div className="container col-12 col-md-8 col-xl-7 col-lg-8 col-xl-7">
         <div className="row justify-content-md-center no-gutters">
           <div
             className="col col-md-8"
@@ -31,7 +31,10 @@ const About = () => {
             <JobTitle>Lead Senior Engineer / Senior Software Engineer</JobTitle>
           </div>
           <div className="col-md-auto"></div>
-          <div className="col col-md-4" style={{marginTop: '0.5em', marginBottom: '0.5em'}}>
+          <div
+            className="col col-md-4"
+            style={{ marginTop: '0.5em', marginBottom: '0.5em' }}
+          >
             <Contacts />
           </div>
         </div>
