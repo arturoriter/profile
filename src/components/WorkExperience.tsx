@@ -38,7 +38,7 @@ const Header = (props: HeaderType) => {
       <Row noGutters>
         <Col md="6" xs="12">
           <a
-            className="font-weight-bold"
+            className="text-dark font-weight-bold"
             href={props.companyLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -63,9 +63,11 @@ const Description = (props: DescriptionType) => {
   return (
     <SmallMarginBottom>
       {props.companyInfo}
-      {props.description.map(value => (
-        <li key={uuid()}>{value} </li>
-      ))}
+      <ul>
+        {props.description.map(value => (
+          <li key={uuid()}>{value} </li>
+        ))}
+      </ul>
     </SmallMarginBottom>
   );
 };

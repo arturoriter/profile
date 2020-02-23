@@ -6,11 +6,13 @@ const Certifications = (props: any) => {
   return (
     <div>
       <Title name="CERTIFICATION.TITLE" />
-      {props.data.map((certification: any) => (
-        <li
-          key={uuid()}
-        >{`${certification.name}. ${certification.institution}`}</li>
-      ))}
+      <ul>
+        {props.data.map((certification: any) => (
+          <li
+            key={uuid()}
+          >{`${certification.name}. ${certification.institution}`}</li>
+        ))}
+      </ul>
     </div>
   );
 };

@@ -11,11 +11,16 @@ const FaceImage = styled.img`
 const Contacts = (props: any) => {
   return (
     <div id="contacts" className="text-center">
-      <FaceImage src={Face} />
+      <FaceImage src={Face} alt="" />
       {props.data.map((contact: any) => (
         <div key={uuid()}>
           <BootstrapIcon name={contact.icon} />
-          <a target="_blank" rel="noopener noreferrer" href={contact.link}>
+          <a
+            className="text-dark font-weight-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={contact.link}
+          >
             {contact.display}
           </a>
         </div>

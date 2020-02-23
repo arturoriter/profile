@@ -17,12 +17,16 @@ const PageInfo = () => {
       <FormattedMessage id="INFO.DESCRIPTION" />
       <Row>
         <Col sm="6">
-          <li>React</li>
-          <li>Typescript</li>
+          <ul>
+            <li>React</li>
+            <li>Typescript</li>
+          </ul>
         </Col>
         <Col sm="6">
-          <li>Bootstrap</li>
-          <li>Styled-components</li>
+          <ul>
+            <li>Bootstrap</li>
+            <li>Styled-components</li>
+          </ul>
         </Col>
       </Row>
       <LinkedinBadge background="light" profileName="arturoriter" />
