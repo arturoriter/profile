@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 const TitleContainer = styled.div`
   margin-top: 1.5em;
@@ -16,14 +17,16 @@ const Label = styled.div`
   font-family: 'Lato-Medium', serif;
 `;
 
-export interface TitleType {
+interface TitleType {
   name: string;
 }
 
 const Title = (props: TitleType) => {
   return (
     <TitleContainer>
-      <Label>{props.name}</Label>
+      <Label>
+        <FormattedMessage id={props.name} />
+      </Label>
     </TitleContainer>
   );
 };

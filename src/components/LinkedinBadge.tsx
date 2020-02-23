@@ -5,8 +5,9 @@ const PageMargin = styled.div`
   margin-top: 2em;
 `;
 
-export interface LinkedinBadgeType {
-  bg: string;
+interface LinkedinBadgeType {
+  background: string;
+  profileName: string;
 }
 
 const LinkedinBadge = (props: LinkedinBadgeType) => {
@@ -17,8 +18,8 @@ const LinkedinBadge = (props: LinkedinBadgeType) => {
       data-size="small"
       data-locale="en_US"
       data-type="horizontal"
-      data-theme={props.bg || 'dark'}
-      data-vanity="arturoriter"
+      data-theme={props.background || 'dark'}
+      data-vanity={props.profileName}
     />
   );
 };

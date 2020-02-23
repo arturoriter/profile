@@ -1,0 +1,296 @@
+{
+  "name": "Arturo Riter",
+  "jobTitle": "Lead Senior Engineer / Senior Software Engineer",
+  "summary": "More than 18 years of hands-on experience as a Software Engineer in different sectors. Bachelor's degree in Computer Engineering. Enthusiastic about agile methodologies. Highly motivated and committed to quality and excellence. Interested in DevSecOps, cloud computing and infrastructure-as-a-code.",
+  "contacts": [
+    {
+      "icon": "linkedin",
+      "link": "https://linkedin.com/in/arturoriter?trk=profile-badge",
+      "display": "linkedin.com/in/arturoriter"
+    },
+    {
+      "icon": "envelope",
+      "link": "mailto:arturo.riter@gmail.com",
+      "display": "arturo.riter@gmail.com"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "description": "Java, Groovy"
+    },
+    {
+      "name": "Cloud Computing",
+      "description": "AWS"
+    },
+    {
+      "name": "Architecture",
+      "description": "Event-Driven, Microservices, REST"
+    },
+    {
+      "name": "Backend",
+      "description": "Spring Boot, Spring Cloud, JPA, jOOQ, Flyway, Netflix Zuul"
+    },
+    {
+      "name": "Ops tools",
+      "description": "Terraform, Docker, Jenkins"
+    },
+    {
+      "name": "Build automation tools",
+      "description": "Maven, Gradle, Yarn"
+    },
+    {
+      "name": "Frontend (beginner)",
+      "description": "React, Typescript, Styled Components, Jest, Webpack, Babel"
+    },
+    {
+      "name": "Testing frameworks",
+      "description": "Spock, Geb, JUnit, Cucumber, Mockito, Wiremock, Pact"
+    },
+    {
+      "name": "Agile",
+      "description": "Scrum, XP, Lean, Kaizen"
+    },
+    {
+      "name": "Code Quality",
+      "description": "SonarQube, lint, OWASP"
+    }
+  ],
+  "workExperience": [
+    {
+      "title": "LEAD SOFTWARE ENGINEER",
+      "company": {
+        "name": "ELEMENT Insurance AG",
+        "link": "https://www.element.in/en",
+        "location": "Berlin, Germany",
+        "info": "Element is the leading white-label product factory for insurance and a leader in insurance digitalization. It offers a unique technology platform (‘Insurance as a Platform’) with a focus on the B2B2X value chain."
+      },
+      "startDate": "Apr 2017",
+      "endDate": "Present",
+      "description": [
+        "Led software engineers, working on all aspects of the team leader role from recruiting and mentoring to agile advocate and quality assurance throughout promoting good practices and strategies",
+        "Built,architected, developed and maintained many services and company tools like CI/CD pipeline, infrastructure modules, microservices and system tests, smoke tests and contract pact tests solutions",
+        "Integrated with Stripe, creating a robust payments solution handling recurring charges, refunds, disputes, dunning, and payment accounting in an event-driven architecture",
+        "Reduced partner onboarding time from a complex, error-prone, time consuming and manual work process to a totally automated and safe process",
+        "Applied NoOps principles through automated deployment and infrastructure-as-a-code as part of the software lifecycle to assure quality and resilience in the cloud"
+      ],
+      "teckStack": "AWS (EC2, Elastic Beanstalk, Fargate, Lambda, SNS, SQS, RDS, DynamoDB, ElasticCache, ECR, Cognito, API Gateway, Secret Manager, Cloudwatch, X-Ray, S3, Glacier), Jenkins, Docker, Terraform, Java, Groovy, Spring Boot, Rest, Gradle, Spock, Geb, Pact, React, Typescript, Stripe, Scrum"
+    },
+    {
+      "title": "SENIOR JAVA CONSULTANT AND TECHNICAL LEADER",
+      "company": {
+        "name": "SLIB information Technology and services",
+        "link": "https://www.slib.com",
+        "location": "Lisbon, Portugal",
+        "info": "SLIB, a subsidiary of BNP Paribas and Natixis, is both a software publisher in the field of finance and a provider of application managed services."
+      },
+      "startDate": "Oct 2014",
+      "endDate": "Apr 2017",
+      "description": [
+        "Led engineer team in a distributed scrum team, designed and developed tools used by brokers to manage/administer financial assets (such as bonds, stocks) with a focus on reactive principles"
+      ],
+      "teckStack": "Java 8, Akka, JAX-B, JMS, Maven, Mockito, JUnit, Cucumber, MyBatis, Derby DB, PostgreSQL, Wildfly, Jenkins, XL-Deploy, Scrum"
+    },
+    {
+      "title": "SENIOR JAVA CONSULTANT",
+      "company": {
+        "name": "Indra Company",
+        "link": "https://www.indracompany.com/en",
+        "location": "Lisbon, Portugal",
+        "info": "Indra is a world-leader in providing proprietary solutions in specific segments in Transport and Defence markets, and the leading firm in Digital Transformation Consultancy and Information Technologies in Spain and Latin America."
+      },
+      "startDate": "Jun 2014",
+      "endDate": "Sep 2014",
+      "description": [
+        "Short fixed-term consulting on migration and application development of a large book publishing company"
+      ],
+      "teckStack": "Java 7, JBoss 5, Wildfly, Maven, Ant, Spring, EJB, JAX-WS, JMS, JUnit, Scrum"
+    },
+    {
+      "title": "SENIOR SOFTWARE DEVELOPER",
+      "company": {
+        "name": "Automatic Data Processing, Inc (ADP)",
+        "link": "https://www.adp.com",
+        "location": "Porto Alegre, Brazil",
+        "info": "ADP is an American provider of human resources management software and services. It is the largest provider of HR services in North America, Europe, Latin America and the Pacific Rim."
+      },
+      "startDate": "Jan 2013",
+      "endDate": "Apr 2014",
+      "description": [
+        "Developed and maintained product versions of the ADP Portal in a geographically distributed team with agile methodologies; Provided technical support, researched work, log analysis, code analysis, database analysis and troubleshooting on a high-availability, large-scale web system"
+      ],
+      "teckStack": "Java, Tomcat, Wildly, Oracle, Maven, Linux, Scrum"
+    },
+    {
+      "title": "SOFTWARE ARCHITECT",
+      "company": {
+        "name": "Ci&T Business Agility",
+        "link": "https://us.ciandt.com",
+        "location": "São Paulo, Brazil",
+        "info": "CI&T is a nearshore information technology and software engineering company. It operates globally and specializes in business-agile enterprise methods for systems integration and software development."
+      },
+      "startDate": "Mar 2011",
+      "endDate": "Dec 2012",
+      "description": [
+        "Provided technical leadership, designed architecture, defined non-functional requirements, developed solutions and technical components, defined database modelling; developed web applications using agile methodology and lean approach"
+      ],
+      "teckStack": "JSF, Richfaces, CSS, Ajax, Web Services, Spring, Hibernate, WebLogic Application Server, Oracle database, JUnit, JMeter, Jenkins, Scrum"
+    },
+    {
+      "title": "SENIOR DEVELOPER",
+      "company": {
+        "name": "Motorola Mobility",
+        "link": "https://www.motorola.com",
+        "location": "São Paulo, Brazil",
+        "info": "Motorola Mobility is a consumer electronics and telecommunications company owned by Lenovo. Primarily manufactures smartphones and other mobile devices running the Android operating system."
+      },
+      "startDate": "Mar 2010",
+      "endDate": "Feb 2011",
+      "description": [
+        "1-year fixed-term consultancy focused mainly in process and application optimization, tuning Oracle queries; developed production control systems for radio/telephone manufacturing and provided specialized support for production applications"
+      ],
+      "teckStack": "Oracle, TCL/TK, Perl, PL/SQL, JavaScript"
+    },
+    {
+      "title": "JAVA DEVELOPER",
+      "company": {
+        "name": "Foundation for Technological Innovation (FITec)",
+        "link": "www.fitec.org.br/en",
+        "location": "São Paulo, Brazil",
+        "info": "FITec is a not-for-profit private foundation, accredited by the Science and Technology Ministry and Information Technology Area Committee to executes projects and activities of research and development on Communications and Information Technology areas."
+      },
+      "startDate": "Nov 2008",
+      "endDate": "Mar 2010",
+      "description": [
+        "Developed low-level Java applications to run on Linux environment; developed dashboard web application in a small scrum team"
+      ],
+      "teckStack": "Oracle and MySQL database, Tomcat, JSF, Hibernate, JavaScript, Scrum"
+    },
+    {
+      "title": "JAVA WEB DEVELOPER AND TECHNICAL LEADER",
+      "company": {
+        "name": "Telecommunications Research and Develop Center (CPqD)",
+        "link": "https://www.cpqd.com.br/en",
+        "location": "São Paulo, Brazil",
+        "info": "CPqD is one of the largest research and development centers in Latin America. Focused on innovation in information and communication technologies."
+      },
+      "startDate": "Nov 2007",
+      "endDate": "Mar 2008",
+      "description": [
+        "Developed web applications and internal tools and provided technical leadership"
+      ],
+      "teckStack": "WSAD, Oracle and Informix databases, JBoss and WebSphere application servers, Struts, JSF, EJB, Hibernate, Tiles, Validator, Javascript, CSS, Ajax, Web Services, Servlet"
+    },
+    {
+      "title": "SOFTWARE DEVELOPER",
+      "company": {
+        "name": "Indra Company",
+        "link": "https://www.indracompany.com/en",
+        "location": "São Paulo, Brazil",
+        "info": "Indra is a world-leader in providing proprietary solutions in specific segments in Transport and Defence markets, and the leading firm in Digital Transformation Consultancy and Information Technologies in Spain and Latin America."
+      },
+      "startDate": "Sep 2005",
+      "endDate": "Oct 2007",
+      "description": [
+        "Developed desktop applications, defined non-functional requirements and technical specification; Provided specialized 24 hours technical support"
+      ],
+      "teckStack": "Java, Delphi, PL/SQL, Oracle database"
+    },
+    {
+      "title": "SOFTWARE DEVELOPER",
+      "company": {
+        "name": "Padtec Optical Components and Systems",
+        "link": "https://www.padtec.com.br/en",
+        "location": "São Paulo, Brazil",
+        "info": "Padtec is the largest manufacturer of optical transport systems in Latin America. It offers advanced, high capacity and flexible optical transport solutions based on DWDM technology."
+      },
+      "startDate": "Sep 2002",
+      "endDate": "Sep 2005",
+      "description": [
+        "Developed desktop tools for network remote operation and management of optical systems used by large companies like service providers, banks and telecommunications companies; Developed low-level applications to run on micro hardware devices; Provided specialized technical support to customers; ministered Linux, MySQL and internal tools courses for Latin American customers"
+      ],
+      "teckStack": "Linux, Kylix, Delphi, Java, SWF, MySQL database"
+    }
+  ],
+  "education": [
+    {
+      "course": "Oracle DBA",
+      "institution": "Veris IBTA",
+      "degree": "Post-Graduate Degree",
+      "startDate": 2010,
+      "endDate": 2011,
+      "thesisTopic": "Oracle Recovery Manager (RMAN)"
+    },
+    {
+      "course": "Computer Engineer",
+      "institution": "Universidade São Francisco",
+      "degree": "Bachelor’s Degree",
+      "startDate": 2002,
+      "endDate": 2006,
+      "thesisTopic": "Full Honors. Distributed programming technologies in Java"
+    },
+    {
+      "course": "Computing Programming",
+      "institution": "Colégio Técnico da Unicamp (COTUCA)",
+      "degree": "Technician Degree",
+      "startDate": 2000,
+      "endDate": 2001
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "institution": "Pluralsight"
+    },
+    {
+      "name": "AWS Certified Solutions Architect",
+      "institution": "Udemy"
+    },
+    {
+      "name": "Demystifying AWS Certified Solutions Architect",
+      "institution": "Pluralsight"
+    },
+    {
+      "name": "ES6 Training",
+      "institution": "Pluralsight"
+    },
+    {
+      "name": "React: The Big Picture",
+      "institution": "Pluralsight"
+    },
+    {
+      "name": "React: Getting Started",
+      "institution": "Pluralsight"
+    },
+    {
+      "name": "Certified Professional Scrum Master I",
+      "institution": "Scrum.org"
+    },
+    {
+      "name": "MongoDB for Java Developers",
+      "institution": "MongoDB University"
+    },
+    {
+      "name": "MySQL Certification: MySQL Database Administration",
+      "institution": "EAC - Authorized MySQL Training Center"
+    },
+    {
+      "name": "MySQL Certification: MySQL Database Optimization",
+      "institution": "EAC - Authorized MySQL Training Center"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Portuguese",
+      "proficiency": "Native proficiency"
+    },
+    {
+      "name": "English",
+      "proficiency": "Fluent proficiency"
+    },
+    {
+      "name": "Spanish",
+      "proficiency": "Limited working proficiency"
+    }
+  ]
+}

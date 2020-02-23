@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import LinkedinBadge from './LinkedinBadge';
 import Row from 'react-bootstrap/Row';
 import { Col } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
 
 const PageContent = styled.div`
   margin-bottom: 2em;
@@ -12,8 +13,8 @@ const PageContent = styled.div`
 const PageInfo = () => {
   return (
     <PageContent>
-      <Title name="Page Info" />
-      This profile has been developed using the following:
+      <Title name="INFO.TITLE" />
+      <FormattedMessage id="INFO.DESCRIPTION" />
       <Row>
         <Col sm="6">
           <li>React</li>
@@ -24,7 +25,7 @@ const PageInfo = () => {
           <li>Styled-components</li>
         </Col>
       </Row>
-      <LinkedinBadge bg="light" />
+      <LinkedinBadge background="light" profileName="arturoriter" />
     </PageContent>
   );
 };

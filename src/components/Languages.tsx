@@ -1,31 +1,31 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Title from './Title';
+import { FormattedMessage } from 'react-intl';
+import uuid from 'uuid';
 
-const Languages = () => {
+const Languages = (props: any) => {
   return (
     <div id="languages">
-      <Title name="Language Skills" />
+      <Title name="LANGUAGE.TITLE" />
       <Table striped bordered hover style={{ lineHeight: 0.7 }}>
         <thead>
           <tr>
-            <th>Language</th>
-            <th>Level</th>
+            <th>
+              <FormattedMessage id="LANGUAGE.NAME" />
+            </th>
+            <th>
+              <FormattedMessage id="LANGUAGE.LEVEL" />
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>English</td>
-            <td>Fluent proficiency</td>
-          </tr>
-          <tr>
-            <td>Portuguese</td>
-            <td>Native proficiency</td>
-          </tr>
-          <tr>
-            <td>Spanish</td>
-            <td>Limited working proficiency</td>
-          </tr>
+          {props.data.map((language: any) => (
+            <tr key={uuid()}>
+              <td>{language.name}</td>
+              <td>{language.proficiency}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>

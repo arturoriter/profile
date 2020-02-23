@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface IconType {
+interface IconType {
   name: string;
 }
 
