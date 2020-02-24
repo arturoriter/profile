@@ -12,8 +12,7 @@ import styled from 'styled-components';
 import data from './data/profile.json';
 
 const AppContainer = styled.div`
-  font-size: 0.8em;
-  font-family: 'Lato-Light', serif;
+  font-family: 'Lato-Light', 'Arial', 'Helvetica', sans-serif;
   text-align: justify;
 `;
 
@@ -23,8 +22,10 @@ const App = () => {
       <Header
         data={{
           name: data.name,
-          jobTitle: data.jobTitle,
-          contacts: data.contacts,
+          headline: data.headline,
+          contacts: {
+            data: data.contacts,
+          },
         }}
       />
       <div className="container col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-7">

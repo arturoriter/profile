@@ -6,7 +6,10 @@ interface IconType {
 
 const BootstrapIcon = (props: IconType) => {
   return (
-    <span className={`fa fa-${props.name}`} style={{ paddingRight: '0.5em' }} />
+    <span
+      className={`fa fa-${props.name}`}
+      style={{ paddingRight: '0.2em', paddingLeft: '0.2em' }}
+    />
   );
 };
 

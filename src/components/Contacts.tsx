@@ -2,18 +2,32 @@ import React from 'react';
 import Face from '../img/Face.png';
 import styled from 'styled-components';
 import BootstrapIcon from './BootstrapIcon';
-import uuid from 'uuid';
+
+const PageContent = styled.div`
+  font-size: 0.8em;
+  text-align: center;
+`;
 
 const FaceImage = styled.img`
   width: 80px;
 `;
 
-const Contacts = (props: any) => {
+export interface ContactType {
+  icon: string;
+  link: string;
+  display: string;
+}
+
+export interface ContactListType {
+  data: Array<ContactType>;
+}
+
+const Contacts = (props: ContactListType) => {
   return (
-    <div id="contacts" className="text-center">
-      <FaceImage src={Face} alt="" />
-      {props.data.map((contact: any) => (
-        <div key={uuid()}>
+    <PageContent id="contacts">
+      <FaceImage src={Face} alt="face" />
+      {props.data.map((contact, index) => (
+        <div key={`contact-${index}`}>
           <BootstrapIcon name={contact.icon} />
           <a
             className="text-dark font-weight-bold"
@@ -25,7 +39,7 @@ const Contacts = (props: any) => {
           </a>
         </div>
       ))}
-    </div>
+    </PageContent>
   );
 };
 

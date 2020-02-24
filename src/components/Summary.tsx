@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Summary = (props: any) => {
+interface SummaryType {
+  data: string;
+}
+
+const Summary = (props: SummaryType) => {
   return <div id="summary">{props.data}</div>;
 };
 

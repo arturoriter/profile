@@ -4,7 +4,7 @@ import App from './App';
 import { IntlProvider } from 'react-intl';
 import { getMessages } from './utils/getMessages';
 
-test('renders learn react link', () => {
+test('renders App component', () => {
   const { getByText } = render(
     <IntlProvider locale="en" messages={getMessages('en')}>
       <App />

@@ -4,8 +4,6 @@ import BootstrapIcon from './BootstrapIcon';
 
 const FooterContainer = styled.footer`
   background: #303336;
-  font-size: 0.8em;
-  color: #fff;
   text-align: center;
   margin-top: 2em;
 `;

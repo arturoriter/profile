@@ -1,15 +1,23 @@
 import React from 'react';
 import Title from './Title';
-import uuid from 'uuid';
 
-const Certifications = (props: any) => {
+interface CertificationType {
+  name: string;
+  institution: string;
+}
+
+interface CertificationListType {
+  data: Array<CertificationType>;
+}
+
+const Certifications = (props: CertificationListType) => {
   return (
     <div>
       <Title name="CERTIFICATION.TITLE" />
       <ul>
-        {props.data.map((certification: any) => (
+        {props.data.map((certification, index) => (
           <li
-            key={uuid()}
+            key={`certification-${index}`}
           >{`${certification.name}. ${certification.institution}`}</li>
         ))}
       </ul>

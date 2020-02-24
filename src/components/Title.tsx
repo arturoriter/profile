@@ -14,7 +14,7 @@ const Label = styled.div`
   text-align: center;
   font-size: 1.2em;
   text-transform: uppercase;
-  font-family: 'Lato-Medium', serif;
+  font-family: 'Lato-Medium', 'Arial', 'Helvetica', sans-serif;
 `;
 
 interface TitleType {
