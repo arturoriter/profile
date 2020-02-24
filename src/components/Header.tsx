@@ -1,24 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
 import Contacts, { ContactListType } from './Contacts';
-import { Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Name = styled.div`
   font-size: 3em;
-  text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: 575px) {
+    font-size: 2.2em;
+  }
 `;
 
-const JobTitle = styled.div`
-  font-size: 1em;
-  text-align: center;
+const Headline = styled.div`
   text-transform: uppercase;
   line-height: 1.5em;
+
+  @media (max-width: 575px) {
+    margin-bottom: 1em;
+  }
 `;
 
 const PageContent = styled.header`
-  margin-bottom: 2em;
+  text-align: center;
   background-color: #b1d6dc;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
 `;
 
 interface HeaderType {
@@ -34,29 +42,31 @@ interface HeaderListType {
 const Header = (props: HeaderListType) => {
   return (
     <PageContent id="header">
-      <Row className="justify-content-md-center">
-        <Col
-          xs="12"
-          sm="8"
-          md="6"
-          lg="5"
-          xl="5"
-          style={{ alignSelf: 'center', lineHeight: '1' }}
-        >
-          <Name>{props.data.name}</Name>
-          <JobTitle>{props.data.headline}</JobTitle>
-        </Col>
-        <Col
-          xs="12"
-          sm="4"
-          md="3"
-          lg="3"
-          xl="2"
-          style={{ marginTop: '0.5em', marginBottom: '0.5em' }}
-        >
-          <Contacts data={props.data.contacts.data} />
-        </Col>
-      </Row>
+      <Container fluid>
+        <Row className="justify-content-md-center">
+          <Col
+            xs="12"
+            sm="8"
+            md="6"
+            lg="5"
+            xl="5"
+            style={{ alignSelf: 'center', lineHeight: '1' }}
+          >
+            <Name>{props.data.name}</Name>
+            <Headline>{props.data.headline}</Headline>
+          </Col>
+          <Col
+            xs="12"
+            sm="4"
+            md="3"
+            lg="3"
+            xl="2"
+            style={{ alignSelf: 'center' }}
+          >
+            <Contacts data={props.data.contacts.data} />
+          </Col>
+        </Row>
+      </Container>
     </PageContent>
   );
 };

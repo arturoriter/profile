@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from './Title';
 import BootstrapIcon from './BootstrapIcon';
-import { Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 
 const SmallMarginBottom = styled.div`
@@ -11,6 +11,11 @@ const SmallMarginBottom = styled.div`
 
 const RegularMarginBottom = styled.div`
   margin-bottom: 1em;
+`;
+
+const JobTitle = styled.div`
+  font-weight: bold;
+  text-transform: uppercase;
 `;
 
 interface HeaderType {
@@ -50,42 +55,44 @@ interface WorkExperienceListType {
 }
 const Header = (props: HeaderType) => {
   return (
-    <SmallMarginBottom>
-      <div className="font-weight-bold text-uppercase">{props.jobTitle}</div>
-      <Row noGutters>
-        <Col md="6" xs="12">
-          <a
-            className="text-dark font-weight-bold"
-            href={props.companyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {props.companyName}
-          </a>
-        </Col>
-        <Col md="3" xs="6">
-          <BootstrapIcon name="globe" />
-          {props.location}
-        </Col>
-        <Col md="3" xs="6">
-          <BootstrapIcon name="calendar" />
-          {props.duration}
-        </Col>
-      </Row>
-    </SmallMarginBottom>
+    <>
+      <JobTitle>{props.jobTitle}</JobTitle>
+      <Container style={{ padding: '0' }}>
+        <Row noGutters>
+          <Col md="6" xs="12">
+            <a
+              className="text-dark font-weight-bold"
+              href={props.companyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {props.companyName}
+            </a>
+          </Col>
+          <Col md="3" xs="6">
+            <BootstrapIcon name="globe" />
+            {props.location}
+          </Col>
+          <Col md="3" xs="6">
+            <BootstrapIcon name="calendar" />
+            {props.duration}
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 
 const Description = (props: DescriptionType) => {
   return (
-    <>
+    <SmallMarginBottom>
       {props.companyInfo}
       <ul style={{ margin: 0 }}>
         {props.description.map((value, index) => (
           <li key={`desc-${props.experienceIndex}.${index}`}>{value} </li>
         ))}
       </ul>
-    </>
+    </SmallMarginBottom>
   );
 };
 

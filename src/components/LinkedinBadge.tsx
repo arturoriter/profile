@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PageMargin = styled.div`
-  margin-top: 2em;
+const PageContainer = styled.div`
+  margin-top: 1em;
+  margin-bottom: 1.5em;
 `;
 
 interface LinkedinBadgeType {
@@ -12,7 +13,7 @@ interface LinkedinBadgeType {
 
 const LinkedinBadge = (props: LinkedinBadgeType) => {
   return (
-    <PageMargin
+    <PageContainer
       className="LI-profile-badge"
       data-version="v1"
       data-size="small"

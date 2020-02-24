@@ -1,15 +1,10 @@
 import React from 'react';
-import Face from '../img/Face.png';
 import styled from 'styled-components';
 import BootstrapIcon from './BootstrapIcon';
 
 const PageContent = styled.div`
   font-size: 0.8em;
   text-align: center;
-`;
-
-const FaceImage = styled.img`
-  width: 80px;
 `;
 
 export interface ContactType {
@@ -25,7 +20,6 @@ export interface ContactListType {
 const Contacts = (props: ContactListType) => {
   return (
     <PageContent id="contacts">
-      <FaceImage src={Face} alt="face" />
       {props.data.map((contact, index) => (
         <div key={`contact-${index}`}>
           <BootstrapIcon name={contact.icon} />

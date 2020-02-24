@@ -2,8 +2,8 @@ import React from 'react';
 import Title from './Title';
 import styled from 'styled-components';
 
-const SmallMarginBottom = styled.div`
-  margin-bottom: 0.5em;
+const RegularMarginBottom = styled.div`
+  margin-bottom: 1em;
 `;
 
 interface EducationType {
@@ -24,14 +24,13 @@ const Education = (props: EducationListType) => {
     <div id="education">
       <Title name="EDUCATION.TITLE" />
       {props.data.map((education, index) => (
-        <SmallMarginBottom key={`education-${index}`}>
+        <RegularMarginBottom key={`education-${index}`}>
           {`${education.course}; 
           ${education.institution}, 
           ${education.degree}. 
-          ${education.startDate} - ${education.endDate || ''} `}
-          <br />
-          {`${education.thesisTopic || ''}`}
-        </SmallMarginBottom>
+          ${education.startDate} - ${education.endDate || ''} \n
+          ${education.thesisTopic || ''}`}
+        </RegularMarginBottom>
       ))}
     </div>
   );

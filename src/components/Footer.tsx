@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import BootstrapIcon from './BootstrapIcon';
 
-const FooterContainer = styled.footer`
+const PageContainer = styled.footer`
   background: #303336;
   text-align: center;
-  margin-top: 2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 `;
 
 const Link = styled.a`
@@ -15,7 +16,7 @@ const Link = styled.a`
 
 const Footer = () => {
   return (
-    <FooterContainer id="footer">
+    <PageContainer id="footer">
       <Link
         href="https://linkedin.com/in/arturoriter?trk=profile-badge"
         target="_blank"
@@ -37,7 +38,7 @@ const Footer = () => {
       >
         <BootstrapIcon name="envelope" />
       </Link>
-    </FooterContainer>
+    </PageContainer>
   );
 };
 

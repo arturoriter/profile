@@ -2,6 +2,11 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Title from './Title';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
+
+const PageContent = styled.div`
+  margin-bottom: 1.5em;
+`;
 
 interface LanguageType {
   name: string;
@@ -13,7 +18,7 @@ interface LanguageListType {
 
 const Languages = (props: LanguageListType) => {
   return (
-    <div id="languages">
+    <PageContent id="languages">
       <Title name="LANGUAGE.TITLE" />
       <Table striped bordered hover style={{ lineHeight: 0.7 }}>
         <thead>
@@ -35,7 +40,7 @@ const Languages = (props: LanguageListType) => {
           ))}
         </tbody>
       </Table>
-    </div>
+    </PageContent>
   );
 };
 

@@ -34,5 +34,5 @@ test('renders WorkExperience component', () => {
   expect(getByText(/company info/i)).toBeInTheDocument();
   expect(getByText(/description1/i)).toBeInTheDocument();
   expect(getByText(/description2/i)).toBeInTheDocument();
-  expect(getByText(/Tech Stack\/Tools: teck stack/i)).toBeInTheDocument();
+  expect(getByText(/Tech Stack: teck stack/i)).toBeInTheDocument();
 });

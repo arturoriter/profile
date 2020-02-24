@@ -5,7 +5,7 @@ import { IntlProvider } from 'react-intl';
 import { getMessages } from '../utils/getMessages';
 
 test('renders Contacts component', () => {
-  const { getByText, getByAltText } = render(
+  const { getByText } = render(
     <IntlProvider locale="en" messages={getMessages('en')}>
       <Contacts
         data={[
@@ -19,5 +19,4 @@ test('renders Contacts component', () => {
     </IntlProvider>
   );
   expect(getByText(/display/i)).toBeInTheDocument();
-  expect(getByAltText(/face/i)).toBeInTheDocument();
 });

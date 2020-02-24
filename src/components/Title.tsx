@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-const TitleContainer = styled.div`
-  margin-top: 1.5em;
+const PageContainer = styled.div`
+  margin-top: 0.5em;
   margin-bottom: 1em;
 `;
 
@@ -12,7 +12,7 @@ const Label = styled.div`
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-transform: uppercase;
   font-family: 'Lato-Medium', 'Arial', 'Helvetica', sans-serif;
 `;
@@ -23,11 +23,11 @@ interface TitleType {
 
 const Title = (props: TitleType) => {
   return (
-    <TitleContainer>
+    <PageContainer>
       <Label>
         <FormattedMessage id={props.name} />
       </Label>
-    </TitleContainer>
+    </PageContainer>
   );
 };
 
