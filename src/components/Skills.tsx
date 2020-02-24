@@ -1,14 +1,24 @@
 import React from 'react';
 import Title from './Title';
-import uuid from 'uuid';
 
-const Skills = (props: any) => {
+interface SkillType {
+  name: string;
+  description: string;
+}
+
+interface SkillListType {
+  data: Array<SkillType>;
+}
+
+const Skills = (props: SkillListType) => {
   return (
     <div id="skills">
       <Title name="SKILLS.TITLE" />
       <ul>
-        {props.data.map((skill: any) => (
-          <li key={uuid()}>{`${skill.name}: ${skill.description}`}</li>
+        {props.data.map((skill, index) => (
+          <li
+            key={`skill-${index}`}
+          >{`${skill.name}: ${skill.description}`}</li>
         ))}
       </ul>
     </div>

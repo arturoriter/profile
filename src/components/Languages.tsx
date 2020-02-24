@@ -2,9 +2,16 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Title from './Title';
 import { FormattedMessage } from 'react-intl';
-import uuid from 'uuid';
 
-const Languages = (props: any) => {
+interface LanguageType {
+  name: string;
+  proficiency: string;
+}
+interface LanguageListType {
+  data: Array<LanguageType>;
+}
+
+const Languages = (props: LanguageListType) => {
   return (
     <div id="languages">
       <Title name="LANGUAGE.TITLE" />
@@ -20,8 +27,8 @@ const Languages = (props: any) => {
           </tr>
         </thead>
         <tbody>
-          {props.data.map((language: any) => (
-            <tr key={uuid()}>
+          {props.data.map((language, index) => (
+            <tr key={`language-${index}`}>
               <td>{language.name}</td>
               <td>{language.proficiency}</td>
             </tr>

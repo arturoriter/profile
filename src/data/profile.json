@@ -1,6 +1,6 @@
 {
   "name": "Arturo Riter",
-  "jobTitle": "Lead Senior Engineer / Senior Software Engineer",
+  "headline": "Lead Senior Engineer / Senior Software Engineer",
   "summary": "More than 18 years of hands-on experience as a Software Engineer in different sectors. Bachelor's degree in Computer Engineering. Enthusiastic about agile methodologies. Highly motivated and committed to quality and excellence. Interested in DevSecOps, cloud computing and infrastructure-as-a-code.",
   "contacts": [
     {
@@ -58,7 +58,7 @@
   ],
   "workExperience": [
     {
-      "title": "LEAD SOFTWARE ENGINEER",
+      "jobTitle": "LEAD SOFTWARE ENGINEER",
       "company": {
         "name": "ELEMENT Insurance AG",
         "link": "https://www.element.in/en",
@@ -77,7 +77,7 @@
       "teckStack": "AWS (EC2, Elastic Beanstalk, Fargate, Lambda, SNS, SQS, RDS, DynamoDB, ElasticCache, ECR, Cognito, API Gateway, Secret Manager, Cloudwatch, X-Ray, S3, Glacier), Jenkins, Docker, Terraform, Java, Groovy, Spring Boot, Rest, Gradle, Spock, Geb, Pact, React, Typescript, Stripe, Scrum"
     },
     {
-      "title": "SENIOR JAVA CONSULTANT AND TECHNICAL LEADER",
+      "jobTitle": "SENIOR JAVA CONSULTANT AND TECHNICAL LEADER",
       "company": {
         "name": "SLIB information Technology and services",
         "link": "https://www.slib.com",
@@ -92,7 +92,7 @@
       "teckStack": "Java 8, Akka, JAX-B, JMS, Maven, Mockito, JUnit, Cucumber, MyBatis, Derby DB, PostgreSQL, Wildfly, Jenkins, XL-Deploy, Scrum"
     },
     {
-      "title": "SENIOR JAVA CONSULTANT",
+      "jobTitle": "SENIOR JAVA CONSULTANT",
       "company": {
         "name": "Indra Company",
         "link": "https://www.indracompany.com/en",
@@ -107,7 +107,7 @@
       "teckStack": "Java 7, JBoss 5, Wildfly, Maven, Ant, Spring, EJB, JAX-WS, JMS, JUnit, Scrum"
     },
     {
-      "title": "SENIOR SOFTWARE DEVELOPER",
+      "jobTitle": "SENIOR SOFTWARE DEVELOPER",
       "company": {
         "name": "Automatic Data Processing, Inc (ADP)",
         "link": "https://www.adp.com",
@@ -122,7 +122,7 @@
       "teckStack": "Java, Tomcat, Wildly, Oracle, Maven, Linux, Scrum"
     },
     {
-      "title": "SOFTWARE ARCHITECT",
+      "jobTitle": "SOFTWARE ARCHITECT",
       "company": {
         "name": "Ci&T Business Agility",
         "link": "https://us.ciandt.com",
@@ -137,7 +137,7 @@
       "teckStack": "JSF, Richfaces, CSS, Ajax, Web Services, Spring, Hibernate, WebLogic Application Server, Oracle database, JUnit, JMeter, Jenkins, Scrum"
     },
     {
-      "title": "SENIOR DEVELOPER",
+      "jobTitle": "SENIOR DEVELOPER",
       "company": {
         "name": "Motorola Mobility",
         "link": "https://www.motorola.com",
@@ -152,7 +152,7 @@
       "teckStack": "Oracle, TCL/TK, Perl, PL/SQL, JavaScript"
     },
     {
-      "title": "JAVA DEVELOPER",
+      "jobTitle": "JAVA DEVELOPER",
       "company": {
         "name": "Foundation for Technological Innovation (FITec)",
         "link": "www.fitec.org.br/en",
@@ -167,7 +167,7 @@
       "teckStack": "Oracle and MySQL database, Tomcat, JSF, Hibernate, JavaScript, Scrum"
     },
     {
-      "title": "JAVA WEB DEVELOPER AND TECHNICAL LEADER",
+      "jobTitle": "JAVA WEB DEVELOPER AND TECHNICAL LEADER",
       "company": {
         "name": "Telecommunications Research and Develop Center (CPqD)",
         "link": "https://www.cpqd.com.br/en",
@@ -182,7 +182,7 @@
       "teckStack": "WSAD, Oracle and Informix databases, JBoss and WebSphere application servers, Struts, JSF, EJB, Hibernate, Tiles, Validator, Javascript, CSS, Ajax, Web Services, Servlet"
     },
     {
-      "title": "SOFTWARE DEVELOPER",
+      "jobTitle": "SOFTWARE DEVELOPER",
       "company": {
         "name": "Indra Company",
         "link": "https://www.indracompany.com/en",
@@ -197,7 +197,7 @@
       "teckStack": "Java, Delphi, PL/SQL, Oracle database"
     },
     {
-      "title": "SOFTWARE DEVELOPER",
+      "jobTitle": "SOFTWARE DEVELOPER",
       "company": {
         "name": "Padtec Optical Components and Systems",
         "link": "https://www.padtec.com.br/en",

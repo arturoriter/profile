@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from './Title';
-import uuid from 'uuid';
 import BootstrapIcon from './BootstrapIcon';
 import { Row, Col } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
@@ -23,6 +22,7 @@ interface HeaderType {
 }
 
 interface DescriptionType {
+  experienceIndex: number;
   companyInfo: string;
   description: Array<string>;
 }
@@ -31,6 +31,23 @@ interface TechStackType {
   description: string;
 }
 
+interface WorkExperienceType {
+  jobTitle: string;
+  company: {
+    name: string;
+    link: string;
+    location: string;
+    info: string;
+  };
+  startDate: string;
+  endDate: string;
+  description: Array<string>;
+  teckStack: string;
+}
+
+interface WorkExperienceListType {
+  data: Array<WorkExperienceType>;
+}
 const Header = (props: HeaderType) => {
   return (
     <SmallMarginBottom>
@@ -61,14 +78,14 @@ const Header = (props: HeaderType) => {
 
 const Description = (props: DescriptionType) => {
   return (
-    <SmallMarginBottom>
+    <>
       {props.companyInfo}
-      <ul>
-        {props.description.map(value => (
-          <li key={uuid()}>{value} </li>
+      <ul style={{ margin: 0 }}>
+        {props.description.map((value, index) => (
+          <li key={`desc-${props.experienceIndex}.${index}`}>{value} </li>
         ))}
       </ul>
-    </SmallMarginBottom>
+    </>
   );
 };
 
@@ -81,21 +98,22 @@ const TechStack = (props: TechStackType) => {
   );
 };
 
-const WorkExperience = (props: any) => {
+const WorkExperience = (props: WorkExperienceListType) => {
   return (
     <div id="experiences">
       <Title name="WORK_EXPERIENCE.TITLE" />
 
-      {props.data.map((experience: any) => (
-        <div key={uuid()}>
+      {props.data.map((experience, index) => (
+        <div key={`experience-${index}`}>
           <Header
-            jobTitle={experience.title}
+            jobTitle={experience.jobTitle}
             companyName={experience.company.name}
             companyLink={experience.company.link}
             location={experience.company.location}
             duration={`${experience.startDate} - ${experience.endDate}`}
           />
           <Description
+            experienceIndex={index}
             companyInfo={experience.company.info}
             description={experience.description}
           />
