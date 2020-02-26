@@ -10,12 +10,12 @@ interface CertificationListType {
   data: Array<CertificationType>;
 }
 
-const Certifications = (props: CertificationListType) => {
+const Certifications = ({ data }: CertificationListType) => {
   return (
     <div>
       <Title name="CERTIFICATION.TITLE" />
       <ul>
-        {props.data.map((certification, index) => (
+        {data.map((certification, index) => (
           <li
             key={`certification-${index}`}
           >{`${certification.name}. ${certification.institution}`}</li>

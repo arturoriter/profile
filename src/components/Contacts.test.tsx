@@ -1,22 +1,18 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import Contacts from './Contacts';
-import { IntlProvider } from 'react-intl';
-import { getMessages } from '../utils/getMessages';
+import renderWithReactIntl from '../utils/renderWithReactIntl';
 
 test('renders Contacts component', () => {
-  const { getByText } = render(
-    <IntlProvider locale="en" messages={getMessages('en')}>
-      <Contacts
-        data={[
-          {
-            icon: 'linkedin',
-            link: 'link',
-            display: 'display',
-          },
-        ]}
-      />
-    </IntlProvider>
+  const { getByText } = renderWithReactIntl(
+    <Contacts
+      data={[
+        {
+          icon: 'linkedin',
+          link: 'link',
+          display: 'display',
+        },
+      ]}
+    />
   );
   expect(getByText(/display/i)).toBeInTheDocument();
 });

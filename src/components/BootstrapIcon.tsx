@@ -10,8 +10,8 @@ interface IconType {
   name: string;
 }
 
-const BootstrapIcon = (props: IconType) => {
-  return <PageContainer className={`fa fa-${props.name}`} />;
+const BootstrapIcon = ({ name }: IconType) => {
+  return <PageContainer className={`fa fa-${name}`} />;
 };
 
 export default BootstrapIcon;

@@ -18,6 +18,14 @@ const JobTitle = styled.div`
   text-transform: uppercase;
 `;
 
+const ColumnTextAlign = styled.div`
+  text-align: right;
+
+  @media (max-width: 767px) {
+    text-align: left;
+  }
+`;
+
 interface HeaderType {
   jobTitle: string;
   companyLink: string;
@@ -54,28 +62,31 @@ interface WorkExperienceListType {
   data: Array<WorkExperienceType>;
 }
 const Header = (props: HeaderType) => {
+  const { jobTitle, companyLink, companyName, location, duration } = {
+    ...props,
+  };
   return (
     <>
-      <JobTitle>{props.jobTitle}</JobTitle>
-      <Container style={{ padding: '0' }}>
-        <Row noGutters>
-          <Col md="6" xs="12">
+      <JobTitle>{jobTitle}</JobTitle>
+      <Container fluid style={{ padding: '0' }}>
+        <Row>
+          <Col xs="12" sm="12" md="5" lg="5" xl="5">
             <a
               className="text-dark font-weight-bold"
-              href={props.companyLink}
+              href={companyLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {props.companyName}
+              {companyName}
             </a>
           </Col>
-          <Col md="3" xs="6">
-            <BootstrapIcon name="globe" />
-            {props.location}
-          </Col>
-          <Col md="3" xs="6">
-            <BootstrapIcon name="calendar" />
-            {props.duration}
+          <Col xs="12" sm="12" md="7" lg="7" xl="7">
+            <ColumnTextAlign>
+              <BootstrapIcon name="globe" />
+              <span style={{ marginRight: '1em' }}>{location}</span>
+              <BootstrapIcon name="calendar" />
+              {duration}
+            </ColumnTextAlign>
           </Col>
         </Row>
       </Container>
@@ -84,12 +95,13 @@ const Header = (props: HeaderType) => {
 };
 
 const Description = (props: DescriptionType) => {
+  const { companyInfo, description, experienceIndex } = { ...props };
   return (
     <SmallMarginBottom>
-      {props.companyInfo}
+      {companyInfo}
       <ul style={{ margin: 0 }}>
-        {props.description.map((value, index) => (
-          <li key={`desc-${props.experienceIndex}.${index}`}>{value} </li>
+        {description.map((value, index) => (
+          <li key={`desc-${experienceIndex}.${index}`}>{value} </li>
         ))}
       </ul>
     </SmallMarginBottom>
@@ -97,20 +109,21 @@ const Description = (props: DescriptionType) => {
 };
 
 const TechStack = (props: TechStackType) => {
+  const { description } = { ...props };
   return (
     <RegularMarginBottom className="font-italic">
       <FormattedMessage id="WORK_EXPERIENCE.TECH_STACK" />
-      {`: ${props.description}`}
+      {`: ${description}`}
     </RegularMarginBottom>
   );
 };
 
-const WorkExperience = (props: WorkExperienceListType) => {
+const WorkExperience = ({ data }: WorkExperienceListType) => {
   return (
     <div id="experiences">
       <Title name="WORK_EXPERIENCE.TITLE" />
 
-      {props.data.map((experience, index) => (
+      {data.map((experience, index) => (
         <div key={`experience-${index}`}>
           <Header
             jobTitle={experience.jobTitle}

@@ -16,7 +16,7 @@ interface LanguageListType {
   data: Array<LanguageType>;
 }
 
-const Languages = (props: LanguageListType) => {
+const Languages = ({ data }: LanguageListType) => {
   return (
     <PageContent id="languages">
       <Title name="LANGUAGE.TITLE" />
@@ -32,7 +32,7 @@ const Languages = (props: LanguageListType) => {
           </tr>
         </thead>
         <tbody>
-          {props.data.map((language, index) => (
+          {data.map((language, index) => (
             <tr key={`language-${index}`}>
               <td>{language.name}</td>
               <td>{language.proficiency}</td>

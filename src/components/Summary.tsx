@@ -9,8 +9,8 @@ interface SummaryType {
   data: string;
 }
 
-const Summary = (props: SummaryType) => {
-  return <PageContainer id="summary">{props.data}</PageContainer>;
+const Summary = ({ data }: SummaryType) => {
+  return <PageContainer id="summary">{data}</PageContainer>;
 };
 
 export default Summary;

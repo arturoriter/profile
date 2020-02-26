@@ -6,7 +6,6 @@ import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Languages from './components/Languages';
-import PageInfo from './components/PageInfo';
 import Footer from './components/Footer';
 import styled from 'styled-components';
 import profile from './data/profile.json';
@@ -24,9 +23,7 @@ const App = () => {
         data={{
           name: profile.name,
           headline: profile.headline,
-          contacts: {
-            data: profile.contacts,
-          },
+          contacts: profile.contacts,
         }}
       />
       <Container className="col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-7">
@@ -58,11 +55,6 @@ const App = () => {
         <Row>
           <Col>
             <Languages data={profile.languages} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <PageInfo />
           </Col>
         </Row>
       </Container>

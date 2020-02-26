@@ -1,14 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import Summary from './Summary';
-import { IntlProvider } from 'react-intl';
-import { getMessages } from '../utils/getMessages';
+import renderWithReactIntl from '../utils/renderWithReactIntl';
 
 test('renders Summary component', () => {
-  const { getByText } = render(
-    <IntlProvider locale="en" messages={getMessages('en')}>
-      <Summary data={'summary'} />
-    </IntlProvider>
-  );
+  const { getByText } = renderWithReactIntl(<Summary data={'summary'} />);
   expect(getByText(/summary/i)).toBeInTheDocument();
 });

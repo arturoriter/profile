@@ -11,7 +11,7 @@ interface LinkedinBadgeType {
   profileName: string;
 }
 
-const LinkedinBadge = (props: LinkedinBadgeType) => {
+const LinkedinBadge = ({ background, profileName }: LinkedinBadgeType) => {
   return (
     <PageContainer
       className="LI-profile-badge"
@@ -19,8 +19,8 @@ const LinkedinBadge = (props: LinkedinBadgeType) => {
       data-size="small"
       data-locale="en_US"
       data-type="horizontal"
-      data-theme={props.background || 'dark'}
-      data-vanity={props.profileName}
+      data-theme={background || 'dark'}
+      data-vanity={profileName}
     />
   );
 };

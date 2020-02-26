@@ -1,21 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import Skills from './Skills';
-import { IntlProvider } from 'react-intl';
-import { getMessages } from '../utils/getMessages';
+import renderWithReactIntl from '../utils/renderWithReactIntl';
 
 test('renders Skills component', () => {
-  const { getByText } = render(
-    <IntlProvider locale="en" messages={getMessages('en')}>
-      <Skills
-        data={[
-          {
-            name: 'name',
-            description: 'description',
-          },
-        ]}
-      />
-    </IntlProvider>
+  const { getByText } = renderWithReactIntl(
+    <Skills
+      data={[
+        {
+          name: 'name',
+          description: 'description',
+        },
+      ]}
+    />
   );
   expect(getByText(/Skills/i)).toBeInTheDocument();
   expect(getByText(/name: description/i)).toBeInTheDocument();

@@ -1,30 +1,26 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import WorkExperience from './WorkExperience';
-import { IntlProvider } from 'react-intl';
-import { getMessages } from '../utils/getMessages';
+import renderWithReactIntl from '../utils/renderWithReactIntl';
 
 test('renders WorkExperience component', () => {
-  const { getByText } = render(
-    <IntlProvider locale="en" messages={getMessages('en')}>
-      <WorkExperience
-        data={[
-          {
-            jobTitle: 'job title',
-            company: {
-              name: 'company name',
-              link: 'company link',
-              location: 'company location',
-              info: 'company info',
-            },
-            startDate: 'start date',
-            endDate: 'end date',
-            description: ['description1', 'description2'],
-            teckStack: 'teck stack',
+  const { getByText } = renderWithReactIntl(
+    <WorkExperience
+      data={[
+        {
+          jobTitle: 'job title',
+          company: {
+            name: 'company name',
+            link: 'company link',
+            location: 'company location',
+            info: 'company info',
           },
-        ]}
-      />
-    </IntlProvider>
+          startDate: 'start date',
+          endDate: 'end date',
+          description: ['description1', 'description2'],
+          teckStack: 'teck stack',
+        },
+      ]}
+    />
   );
   expect(getByText(/Work Experience/i)).toBeInTheDocument();
   expect(getByText(/job title/i)).toBeInTheDocument();

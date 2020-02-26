@@ -17,10 +17,10 @@ export interface ContactListType {
   data: Array<ContactType>;
 }
 
-const Contacts = (props: ContactListType) => {
+const Contacts = ({ data }: ContactListType) => {
   return (
     <PageContent id="contacts">
-      {props.data.map((contact, index) => (
+      {data.map((contact, index) => (
         <div key={`contact-${index}`}>
           <BootstrapIcon name={contact.icon} />
           <a

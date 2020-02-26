@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://arturoriter.github.io/profile/",
   "dependencies": {
+    "accept-language": "^3.0.18",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "react": "^16.12.0",

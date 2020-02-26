@@ -7,9 +7,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { IntlProvider } from 'react-intl';
 import { getMessages } from './utils/getMessages';
+import acceptLanguage from 'accept-language';
+
+acceptLanguage.languages(['en']);
+
+const locale = 'en';
+const messages = getMessages(locale);
 
 ReactDOM.render(
-  <IntlProvider locale="en" messages={getMessages('en')}>
+  <IntlProvider locale={locale} messages={messages}>
     <App />
   </IntlProvider>,
   document.getElementById('root')

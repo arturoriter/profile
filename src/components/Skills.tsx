@@ -10,12 +10,12 @@ interface SkillListType {
   data: Array<SkillType>;
 }
 
-const Skills = (props: SkillListType) => {
+const Skills = ({ data }: SkillListType) => {
   return (
     <div id="skills">
       <Title name="SKILLS.TITLE" />
       <ul>
-        {props.data.map((skill, index) => (
+        {data.map((skill, index) => (
           <li
             key={`skill-${index}`}
           >{`${skill.name}: ${skill.description}`}</li>

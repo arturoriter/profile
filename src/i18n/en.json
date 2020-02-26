@@ -8,5 +8,6 @@
   "INFO.TITLE": "Information",
   "INFO.DESCRIPTION": "This profile has been developed using the following:",
   "WORK_EXPERIENCE.TITLE": "Work experience",
-  "WORK_EXPERIENCE.TECH_STACK": "Tech Stack"
+  "WORK_EXPERIENCE.TECH_STACK": "Tech Stack",
+  "FOOTER.DEVELOPED_BY": "Developed by Arturo Riter using React, TypeScript, Bootstrap and Styled-components"
 }

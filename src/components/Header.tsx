@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Contacts, { ContactListType } from './Contacts';
+import Contacts, { ContactType } from './Contacts';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Name = styled.div`
@@ -32,14 +32,14 @@ const PageContent = styled.header`
 interface HeaderType {
   name: string;
   headline: string;
-  contacts: ContactListType;
+  contacts: Array<ContactType>;
 }
 
 interface HeaderListType {
   data: HeaderType;
 }
 
-const Header = (props: HeaderListType) => {
+const Header = ({ data }: HeaderListType) => {
   return (
     <PageContent id="header">
       <Container fluid>
@@ -52,8 +52,8 @@ const Header = (props: HeaderListType) => {
             xl="5"
             style={{ alignSelf: 'center', lineHeight: '1' }}
           >
-            <Name>{props.data.name}</Name>
-            <Headline>{props.data.headline}</Headline>
+            <Name>{data.name}</Name>
+            <Headline>{data.headline}</Headline>
           </Col>
           <Col
             xs="12"
@@ -63,7 +63,7 @@ const Header = (props: HeaderListType) => {
             xl="2"
             style={{ alignSelf: 'center' }}
           >
-            <Contacts data={props.data.contacts.data} />
+            <Contacts data={data.contacts} />
           </Col>
         </Row>
       </Container>

@@ -19,11 +19,11 @@ interface EducationListType {
   data: Array<EducationType>;
 }
 
-const Education = (props: EducationListType) => {
+const Education = ({ data }: EducationListType) => {
   return (
     <div id="education">
       <Title name="EDUCATION.TITLE" />
-      {props.data.map((education, index) => (
+      {data.map((education, index) => (
         <RegularMarginBottom key={`education-${index}`}>
           {`${education.course}; 
           ${education.institution}, 
