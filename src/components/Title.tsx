@@ -2,16 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-const PageContainer = styled.div`
-  background-color: #b1d6dc;
+const StyledH1 = styled.h1`
+  color: ${props => props.theme.h1.color};
+  background-color: ${props => props.theme.h1.backgroundColor};
+  font-family: ${props => props.theme.h1.fontFamily};;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-align: center;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin-top: 0.5em;
   margin-bottom: 1em;
-  text-align: center;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  font-family: 'Lato-Medium', 'Arial', 'Helvetica', sans-serif;
 `;
 
 interface TitleType {
@@ -20,9 +21,11 @@ interface TitleType {
 
 const Title = ({ name }: TitleType) => {
   return (
-    <PageContainer>
+    <>
+    <StyledH1>
       <FormattedMessage id={name} />
-    </PageContainer>
+    </StyledH1>
+    </>
   );
 };
 

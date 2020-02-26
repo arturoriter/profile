@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import BootstrapIcon from './BootstrapIcon';
 
-const PageContent = styled.div`
+const StyledDiv = styled.div`
   font-size: 0.8em;
   text-align: center;
+`;
+
+const StyledLink = styled.a`
+  color: ${props => props.theme.header.color};
+  font-weight: bold;
 `;
 
 export interface ContactType {
@@ -19,21 +24,16 @@ export interface ContactListType {
 
 const Contacts = ({ data }: ContactListType) => {
   return (
-    <PageContent id="contacts">
+    <StyledDiv id="contacts">
       {data.map((contact, index) => (
         <div key={`contact-${index}`}>
           <BootstrapIcon name={contact.icon} />
-          <a
-            className="text-dark font-weight-bold"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={contact.link}
-          >
+          <StyledLink target="_blank" rel="noopener noreferrer" href={contact.link}>
             {contact.display}
-          </a>
+          </StyledLink>
         </div>
       ))}
-    </PageContent>
+    </StyledDiv>
   );
 };
 

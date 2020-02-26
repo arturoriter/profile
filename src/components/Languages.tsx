@@ -4,8 +4,12 @@ import Title from './Title';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 
-const PageContent = styled.div`
+const StyledDiv = styled.div`
   margin-bottom: 1.5em;
+`;
+
+const StyledTable = styled(Table)`
+  line-height: 0.7;
 `;
 
 interface LanguageType {
@@ -18,9 +22,9 @@ interface LanguageListType {
 
 const Languages = ({ data }: LanguageListType) => {
   return (
-    <PageContent id="languages">
+    <StyledDiv id="languages">
       <Title name="LANGUAGE.TITLE" />
-      <Table striped bordered hover style={{ lineHeight: 0.7 }}>
+      <StyledTable bordered hover className='table-dark'>
         <thead>
           <tr>
             <th>
@@ -39,8 +43,8 @@ const Languages = ({ data }: LanguageListType) => {
             </tr>
           ))}
         </tbody>
-      </Table>
-    </PageContent>
+      </StyledTable>
+    </StyledDiv>
   );
 };
 
