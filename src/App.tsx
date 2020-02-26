@@ -10,15 +10,18 @@ import Footer from './components/Footer';
 import styled from 'styled-components';
 import profile from './data/profile.json';
 import { Container, Row, Col } from 'react-bootstrap';
+import LinkedinBadge from './components/LinkedinBadge';
 
-const AppContainer = styled.div`
-  font-family: 'Lato-Light', 'Arial', 'Helvetica', sans-serif;
+const StyledDiv = styled.div`
+  background-color: ${props => props.theme.page.backgroundColor};
+  color: ${props => props.theme.page.color};
+  font-family: ${props => props.theme.page.fontFamily};
   text-align: justify;
 `;
 
 const App = () => {
   return (
-    <AppContainer>
+    <StyledDiv>
       <Header
         data={{
           name: profile.name,
@@ -30,36 +33,17 @@ const App = () => {
         <Row>
           <Col>
             <Summary data={profile.summary} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
             <Skills data={profile.skills} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
             <WorkExperience data={profile.workExperience} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
             <Education data={profile.education} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
             <Certifications data={profile.certifications} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
             <Languages data={profile.languages} />
+            <LinkedinBadge background="light" profileName={profile.linkedinProfileName} />
           </Col>
         </Row>
       </Container>
       <Footer />
-    </AppContainer>
+    </StyledDiv>
   );
 };
 

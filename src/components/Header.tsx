@@ -21,9 +21,10 @@ const Headline = styled.div`
   }
 `;
 
-const PageContent = styled.header`
+const StyledHeader = styled.header`
   text-align: center;
-  background-color: #b1d6dc;
+  color: ${props => props.theme.header.color};
+  background-color: ${props => props.theme.header.backgroundColor};
   padding-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 1em;
@@ -41,7 +42,7 @@ interface HeaderListType {
 
 const Header = ({ data }: HeaderListType) => {
   return (
-    <PageContent id="header">
+    <StyledHeader id="header">
       <Container fluid>
         <Row className="justify-content-md-center">
           <Col
@@ -67,7 +68,7 @@ const Header = ({ data }: HeaderListType) => {
           </Col>
         </Row>
       </Container>
-    </PageContent>
+    </StyledHeader>
   );
 };
 

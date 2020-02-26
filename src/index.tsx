@@ -8,6 +8,9 @@ import * as serviceWorker from './serviceWorker';
 import { IntlProvider } from 'react-intl';
 import { getMessages } from './utils/getMessages';
 import acceptLanguage from 'accept-language';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './data/theme';
+import { darkTheme } from './data/darkTheme';
 
 acceptLanguage.languages(['en']);
 
@@ -15,9 +18,11 @@ const locale = 'en';
 const messages = getMessages(locale);
 
 ReactDOM.render(
-  <IntlProvider locale={locale} messages={messages}>
-    <App />
-  </IntlProvider>,
+  <ThemeProvider theme={darkTheme}>
+    <IntlProvider locale={locale} messages={messages}>
+      <App />
+    </IntlProvider>
+  </ThemeProvider>,
   document.getElementById('root')
 );
 

@@ -13,6 +13,11 @@ const RegularMarginBottom = styled.div`
   margin-bottom: 1em;
 `;
 
+const StyledLink = styled.a`
+  color: ${props => props.theme.page.color};
+  font-weight: bold;
+`;
+
 const JobTitle = styled.div`
   font-weight: bold;
   text-transform: uppercase;
@@ -71,14 +76,13 @@ const Header = (props: HeaderType) => {
       <Container fluid style={{ padding: '0' }}>
         <Row>
           <Col xs="12" sm="12" md="5" lg="5" xl="5">
-            <a
-              className="text-dark font-weight-bold"
+            <StyledLink
               href={companyLink}
               target="_blank"
               rel="noopener noreferrer"
             >
               {companyName}
-            </a>
+            </StyledLink>
           </Col>
           <Col xs="12" sm="12" md="7" lg="7" xl="7">
             <ColumnTextAlign>
