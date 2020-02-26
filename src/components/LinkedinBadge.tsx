@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTheme } from '../ThemeManager';
 
 const StyledDiv = styled.div`
   margin-top: 1em;
@@ -7,20 +8,20 @@ const StyledDiv = styled.div`
 `;
 
 interface LinkedinBadgeType {
-  background: string;
   profileName: string;
 }
 
-const LinkedinBadge = ({ background, profileName }: LinkedinBadgeType) => {
+const LinkedinBadge = ({ profileName }: LinkedinBadgeType) => {
+  const theme = useTheme();
+
   return (
     <StyledDiv
-      className="LI-profile-badge"
+      className={theme.mode.linkedinBadge}
       data-version="v1"
       data-size="small"
       data-locale="en_US"
       data-type="horizontal"
-      data-theme={background || 'dark'}
-      data-vanity={profileName}
+      data-vanity="arturoriter"
     />
   );
 };

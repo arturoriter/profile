@@ -8,8 +8,12 @@ const StyledDiv = styled.div`
 `;
 
 const StyledLink = styled.a`
-  color: ${props => props.theme.header.color};
+  color: ${props => props.theme.header.textColor};
   font-weight: bold;
+
+  :hover {
+    color: ${props => props.theme.header.textColor};
+  }
 `;
 
 export interface ContactType {
@@ -28,7 +32,11 @@ const Contacts = ({ data }: ContactListType) => {
       {data.map((contact, index) => (
         <div key={`contact-${index}`}>
           <BootstrapIcon name={contact.icon} />
-          <StyledLink target="_blank" rel="noopener noreferrer" href={contact.link}>
+          <StyledLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={contact.link}
+          >
             {contact.display}
           </StyledLink>
         </div>

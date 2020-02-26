@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Contacts, { ContactType } from './Contacts';
 import { Container, Row, Col } from 'react-bootstrap';
+import { darkTheme } from '../data/darkTheme';
+import { useTheme } from '../ThemeManager';
 
 const Name = styled.div`
   font-size: 3em;
@@ -23,11 +25,23 @@ const Headline = styled.div`
 
 const StyledHeader = styled.header`
   text-align: center;
-  color: ${props => props.theme.header.color};
+  color: ${props => props.theme.header.textColor};
   background-color: ${props => props.theme.header.backgroundColor};
   padding-top: 1em;
   padding-bottom: 1em;
   margin-bottom: 1em;
+`;
+
+const Button = styled.button`
+  color: ${props => props.theme.button.textColor};
+  background-color: ${props => props.theme.button.backgroundColor};
+  margin-top: 1em;
+  border: none;
+  border-radius: 0.3em;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 0.7em;
+  padding: 0.2em 0.5em;
 `;
 
 interface HeaderType {
@@ -41,6 +55,8 @@ interface HeaderListType {
 }
 
 const Header = ({ data }: HeaderListType) => {
+  const theme = useTheme();
+
   return (
     <StyledHeader id="header">
       <Container fluid>
@@ -65,6 +81,11 @@ const Header = ({ data }: HeaderListType) => {
             style={{ alignSelf: 'center' }}
           >
             <Contacts data={data.contacts} />
+            <Button onClick={() => theme.toggle()}>
+              {theme.mode === darkTheme
+                ? 'Switch to Light Mode'
+                : 'Switch to Dark Mode'}
+            </Button>
           </Col>
         </Row>
       </Container>

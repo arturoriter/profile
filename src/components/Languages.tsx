@@ -3,6 +3,7 @@ import Table from 'react-bootstrap/Table';
 import Title from './Title';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
+import { useTheme } from '../ThemeManager';
 
 const StyledDiv = styled.div`
   margin-bottom: 1.5em;
@@ -10,6 +11,7 @@ const StyledDiv = styled.div`
 
 const StyledTable = styled(Table)`
   line-height: 0.7;
+  color: ${props => props.theme.page.textColor};
 `;
 
 interface LanguageType {
@@ -21,10 +23,12 @@ interface LanguageListType {
 }
 
 const Languages = ({ data }: LanguageListType) => {
+  const theme = useTheme();
+
   return (
     <StyledDiv id="languages">
       <Title name="LANGUAGE.TITLE" />
-      <StyledTable bordered hover className='table-dark'>
+      <StyledTable className={theme.mode.table}>
         <thead>
           <tr>
             <th>

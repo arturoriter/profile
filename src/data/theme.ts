@@ -1,27 +1,24 @@
-import { DefaultTheme } from 'styled-components';
-
-export const theme: DefaultTheme = {
+export interface Theme {
   page: {
-    color: '#000',
-    backgroundColor: '#fff',
-    fontFamily: 'Lato-Light, Arial, Helvetica, sans-serif',
-  },
-  linkedinBadge: 'light',
-  table: '.table-striped',
+    textColor: string;
+    backgroundColor: string;
+  };
   h1: {
-    backgroundColor: '#b1d6dc',
-    color: '#000',
-    fontFamily: 'Lato-Medium, Arial, Helvetica, sans-serif',
-  },
+    backgroundColor: string;
+    textColor: string;
+  };
   header: {
-    backgroundColor: '#b1d6dc',
-    color: '#000',
-  },
+    backgroundColor: string;
+    textColor: string;
+  };
   footer: {
-    backgroundColor: '#303336',
-    color: '#fff',
-  },
-  headline: {
-    fontSize: '1.25rem',
-  },
-};
+    backgroundColor: string;
+    textColor: string;
+  };
+  button: {
+    backgroundColor: string;
+    textColor: string;
+  };
+  linkedinBadge: string;
+  table: string;
+}

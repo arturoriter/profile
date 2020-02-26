@@ -14,8 +14,11 @@ const RegularMarginBottom = styled.div`
 `;
 
 const StyledLink = styled.a`
-  color: ${props => props.theme.page.color};
+  color: ${props => props.theme.page.textColor};
   font-weight: bold;
+  :hover {
+    color: ${props => props.theme.page.textColor};
+  }
 `;
 
 const JobTitle = styled.div`

@@ -1,11 +1,22 @@
 import React from 'react';
 import App from './App';
-import renderWithReactIntl from './utils/renderWithReactIntl';
+import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+import { IntlProvider } from 'react-intl';
+import { darkTheme } from './data/darkTheme';
+import { getMessages } from './utils/getMessages';
+const locale = 'en';
+const messages = getMessages(locale);
 
-test('renders App component', () => {
-  const { getByText } = renderWithReactIntl(<App />);
-  expect(getByText(/Work Experience/i)).toBeInTheDocument();
-  expect(getByText(/Education/i)).toBeInTheDocument();
-  expect(getByText(/Certifications/i)).toBeInTheDocument();
-  expect(getByText(/Language Skills/i)).toBeInTheDocument();
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(
+    <ThemeProvider theme={darkTheme}>
+      <IntlProvider locale={locale} messages={messages}>
+        <App />
+      </IntlProvider>
+    </ThemeProvider>,
+    div
+  );
+  ReactDOM.unmountComponentAtNode(div);
 });

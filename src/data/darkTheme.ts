@@ -1,25 +1,26 @@
-export const darkTheme = {
+import { Theme } from './Theme';
+
+export const darkTheme: Theme = {
   page: {
-    color: '#dae0e5',
-    backgroundColor: '#212529',
-    fontFamily: 'Lato-Light, Arial, Helvetica, sans-serif',
+    textColor: '#dae0e5',
+    backgroundColor: '#161616',
   },
-  linkedinBadge: 'dark',
-  table: '.table-dark',
   h1: {
-    backgroundColor: '#055967',
-    color: '#dae0e5',
-    fontFamily: 'Lato-Medium, Arial, Helvetica, sans-serif',
+    backgroundColor: '#222',
+    textColor: '#dae0e5',
   },
   header: {
-    backgroundColor: '#055967',
-    color: '#dae0e5',
+    backgroundColor: '#222',
+    textColor: '#dae0e5',
   },
   footer: {
     backgroundColor: '#303336',
-    color: '#fff',
+    textColor: '#fff',
   },
-  headline: {
-    fontSize: '1.25rem',
+  button: {
+    backgroundColor: '#silver',
+    textColor: '#000',
   },
+  linkedinBadge: 'LI-profile-badge LI-badge-container-horizontal-dark dark',
+  table: '.table-dark',
 };

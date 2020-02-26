@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 
 const StyledFooter = styled.footer`
-  color: ${props => props.theme.footer.color};
+  color: ${props => props.theme.footer.textColor};
   background-color: ${props => props.theme.footer.backgroundColor};
   text-align: center;
   padding-top: 0.2em;
@@ -14,7 +14,7 @@ const StyledFooter = styled.footer`
 
 const StyledLink = styled.a`
   font-size: 2em;
-  color: ${props => props.theme.footer.color};
+  color: ${props => props.theme.footer.textColor};
 `;
 
 const DevelopedBy = styled.span`
