@@ -7,59 +7,48 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Languages from './components/Languages';
 import Footer from './components/Footer';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import profile from './data/profile.json';
 import { Container, Row, Col } from 'react-bootstrap';
+import LinkedinBadge from './components/LinkedinBadge';
+import { useTheme } from './ThemeManager';
 
-const AppContainer = styled.div`
+const StyledDiv = styled.div`
+  background-color: ${props => props.theme.page.backgroundColor};
+  color: ${props => props.theme.page.textColor};
   font-family: 'Lato-Light', 'Arial', 'Helvetica', sans-serif;
   text-align: justify;
 `;
 
 const App = () => {
+  const theme = useTheme();
+
   return (
-    <AppContainer>
-      <Header
-        data={{
-          name: profile.name,
-          headline: profile.headline,
-          contacts: profile.contacts,
-        }}
-      />
-      <Container className="col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-7">
-        <Row>
-          <Col>
-            <Summary data={profile.summary} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Skills data={profile.skills} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <WorkExperience data={profile.workExperience} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Education data={profile.education} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Certifications data={profile.certifications} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Languages data={profile.languages} />
-          </Col>
-        </Row>
-      </Container>
-      <Footer />
-    </AppContainer>
+    <ThemeProvider theme={theme.mode}>
+      <StyledDiv>
+        <Header
+          data={{
+            name: profile.name,
+            headline: profile.headline,
+            contacts: profile.contacts,
+          }}
+        />
+        <Container className="col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-7">
+          <Row>
+            <Col>
+              <Summary data={profile.summary} />
+              <Skills data={profile.skills} />
+              <WorkExperience data={profile.workExperience} />
+              <Education data={profile.education} />
+              <Certifications data={profile.certifications} />
+              <Languages data={profile.languages} />
+              <LinkedinBadge profileName={profile.linkedinProfileName} />
+            </Col>
+          </Row>
+        </Container>
+        <Footer />
+      </StyledDiv>
+    </ThemeProvider>
   );
 };
 

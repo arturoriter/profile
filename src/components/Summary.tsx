@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PageContainer = styled.div`
+const StyledDiv = styled.div`
   margin-bottom: 1em;
 `;
 
@@ -10,7 +10,7 @@ interface SummaryType {
 }
 
 const Summary = ({ data }: SummaryType) => {
-  return <PageContainer id="summary">{data}</PageContainer>;
+  return <StyledDiv id="summary">{data}</StyledDiv>;
 };
 
 export default Summary;

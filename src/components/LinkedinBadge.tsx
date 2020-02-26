@@ -1,26 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTheme } from '../ThemeManager';
 
-const PageContainer = styled.div`
+const StyledDiv = styled.div`
   margin-top: 1em;
   margin-bottom: 1.5em;
 `;
 
 interface LinkedinBadgeType {
-  background: string;
   profileName: string;
 }
 
-const LinkedinBadge = ({ background, profileName }: LinkedinBadgeType) => {
+const LinkedinBadge = ({ profileName }: LinkedinBadgeType) => {
+  const theme = useTheme();
+
   return (
-    <PageContainer
-      className="LI-profile-badge"
+    <StyledDiv
+      className={theme.mode.linkedinBadge}
       data-version="v1"
       data-size="small"
       data-locale="en_US"
       data-type="horizontal"
-      data-theme={background || 'dark'}
-      data-vanity={profileName}
+      data-vanity="arturoriter"
     />
   );
 };

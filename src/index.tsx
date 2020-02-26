@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import { IntlProvider } from 'react-intl';
 import { getMessages } from './utils/getMessages';
 import acceptLanguage from 'accept-language';
+import { ThemeManager } from './ThemeManager';
 
 acceptLanguage.languages(['en']);
 
@@ -15,9 +16,11 @@ const locale = 'en';
 const messages = getMessages(locale);
 
 ReactDOM.render(
-  <IntlProvider locale={locale} messages={messages}>
-    <App />
-  </IntlProvider>,
+  <ThemeManager>
+    <IntlProvider locale={locale} messages={messages}>
+      <App />
+    </IntlProvider>
+  </ThemeManager>,
   document.getElementById('root')
 );
 
