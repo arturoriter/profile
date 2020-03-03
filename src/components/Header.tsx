@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Contacts, { ContactType } from './Contacts';
 import { Container, Row, Col } from 'react-bootstrap';
-import { DarkTheme } from '../data/DarkTheme';
-import { useTheme } from '../ThemeManager';
+import ThemeButton from './ThemeButton';
 
 const Name = styled.div`
   font-size: 3em;
@@ -32,26 +31,6 @@ const StyledHeader = styled.header`
   margin-bottom: 1em;
 `;
 
-const StyledLink = styled.a`
-  color: ${props => props.theme.button.textColor};
-  background-color: ${props => props.theme.button.backgroundColor};
-  border-radius: 0.3em;
-  font-size: 0.7em;
-  padding: 0.2em 0.5em;
-  border-top: 1px solid #cccccc;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #cccccc;
-
-  :hover,
-  :visited,
-  :link,
-  :active {
-    color: ${props => props.theme.button.textColor};
-    text-decoration: none;
-  }
-`;
-
 interface HeaderType {
   name: string;
   headline: string;
@@ -63,8 +42,6 @@ interface HeaderListType {
 }
 
 const Header = ({ data }: HeaderListType) => {
-  const theme = useTheme();
-
   return (
     <StyledHeader id="header">
       <Container fluid>
@@ -89,11 +66,7 @@ const Header = ({ data }: HeaderListType) => {
             style={{ alignSelf: 'center' }}
           >
             <Contacts data={data.contacts} />
-            <StyledLink href="#" onClick={() => theme.toggle()}>
-              {theme.mode === DarkTheme
-                ? 'Switch to Light Mode'
-                : 'Switch to Dark Mode'}
-            </StyledLink>
+            <ThemeButton />
           </Col>
         </Row>
       </Container>

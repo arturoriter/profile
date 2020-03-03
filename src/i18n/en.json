@@ -8,5 +8,7 @@
   "INFO.TITLE": "Information",
   "WORK_EXPERIENCE.TITLE": "Work experience",
   "WORK_EXPERIENCE.TECH_STACK": "Tech Stack",
-  "FOOTER.DEVELOPED_BY": "Developed by Arturo Riter with React, TypeScript, Bootstrap and styled-components"
+  "FOOTER.DEVELOPED_BY": "Developed by Arturo Riter with React, TypeScript, Bootstrap and styled-components",
+  "THEME.LIGHT_MODE": "Switch to Light Mode",
+  "THEME.DARK_MODE": "Switch to Dark Mode"
 }

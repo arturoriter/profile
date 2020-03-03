@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Summary from './components/Summary';
 import Skills from './components/Skills';
@@ -23,9 +23,24 @@ const StyledDiv = styled.div`
 const App = () => {
   const theme = useTheme();
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    new Promise(function(resolve) {
+      setTimeout(function() {
+        resolve();
+      }, 0);
+    }).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) return <div>Loading...</div>;
+
   return (
     <ThemeProvider theme={theme.mode}>
-      <StyledDiv>
+      <StyledDiv id="app">
         <Header
           data={{
             name: profile.name,

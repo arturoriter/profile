@@ -12,7 +12,7 @@ interface CertificationListType {
 
 const Certifications = ({ data }: CertificationListType) => {
   return (
-    <div>
+    <div id="certifications">
       <Title name="CERTIFICATION.TITLE" />
       <ul>
         {data.map((certification, index) => (

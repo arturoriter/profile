@@ -15,11 +15,11 @@ export const DarkTheme: Theme = {
   },
   footer: {
     backgroundColor: '#303336',
-    textColor: '#fff',
+    textColor: '#f6f6f6',
   },
   button: {
     backgroundColor: '#silver',
-    textColor: '#fff',
+    textColor: '#f6f6f6',
   },
   linkedinBadge: 'LI-profile-badge LI-badge-container-horizontal-dark dark',
   table: '.table-dark',

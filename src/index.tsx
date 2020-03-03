@@ -5,9 +5,9 @@ import 'font-awesome/css/font-awesome.min.css';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import acceptLanguage from 'accept-language';
 import { IntlProvider } from 'react-intl';
 import { getMessages } from './utils/getMessages';
-import acceptLanguage from 'accept-language';
 import { ThemeManager } from './ThemeManager';
 
 acceptLanguage.languages(['en']);

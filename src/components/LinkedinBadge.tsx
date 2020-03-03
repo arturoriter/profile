@@ -14,16 +14,20 @@ interface LinkedinBadgeType {
 const LinkedinBadge = ({ profileName }: LinkedinBadgeType) => {
   const theme = useTheme();
 
-  return (
-    <StyledDiv
-      className={theme.mode.linkedinBadge}
-      data-version="v1"
-      data-size="small"
-      data-locale="en_US"
-      data-type="horizontal"
-      data-vanity="arturoriter"
-    />
-  );
+  try {
+    return (
+      <StyledDiv
+        className={theme.mode.linkedinBadge}
+        data-version="v1"
+        data-size="small"
+        data-locale="en_US"
+        data-type="horizontal"
+        data-vanity="arturoriter"
+      />
+    );
+  } catch (e) {
+    return null;
+  }
 };
 
 export default LinkedinBadge;
