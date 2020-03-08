@@ -1,28 +1,16 @@
-name: CI
-on: [ push ]
-
+name: Build and Deploy
+on: [push]
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
         with:
           persist-credentials: false
 
-      - name: install
-        run: yarn install
-
-      - name: test
-        run: CI=true yarn test
-
-      - name: Configure git
-        run: |
-          git config user.email "arturo.riter@gmail.com"
-          git config user.name "Arturo Riter"
-
       - name: Build and Deploy 🚀
-        run: |
-          yarn build
-          yarn deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          BRANCH: gh-pages
+          FOLDER: build
