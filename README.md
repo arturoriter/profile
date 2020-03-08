@@ -1,3 +1,5 @@
+![CI](https://github.com/arturoriter/profile/workflows/CI/badge.svg?branch=master)
+
 # Arturo Riter's Profile
 
 This project has been developed using:
