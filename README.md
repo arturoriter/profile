@@ -1,4 +1,6 @@
-![CI](https://github.com/arturoriter/profile/workflows/CI/badge.svg?branch=master)
+[![GitHub marketplace](https://img.shields.io/badge/marketplace-github--pages-blue?logo=github&style=flat-square)](https://github.com/marketplace/actions/github-pages)
+![Test](https://github.com/arturoriter/profile/workflows/CI/badge.svg?branch=master)
+![Deploy](https://github.com/arturoriter/profile/workflows/Deploy/badge.svg?branch=master)
 
 # Arturo Riter's Profile
 

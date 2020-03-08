@@ -1,6 +1,8 @@
-name: CI
-on: [ push ]
-
+name: Deploy
+on:
+  push:
+    branches: [ master ]
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,13 +14,15 @@ jobs:
         persist-credentials: false
         token: ${{ secrets.ACCESS_TOKEN }}
 
-    - name: install
-      run: yarn install
+    - name: yarn install, build and test
+      run: |
+        yarn install
+        yarn build --if-present
+        yarn test
+      env: 
+        CI: true
 
-    - name: test
-      run: CI=true yarn test
-
-    - name: Build and Deploy 🚀
+    - name: Deploy 🚀
       uses: crazy-max/ghaction-github-pages@v1
       with:
         target_branch: gh-pages
