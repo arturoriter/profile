@@ -4,6 +4,11 @@
   "private": true,
   "homepage": "https://arturoriter.github.io/profile/",
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/styled-components": "^4.4.2",
+    "@types/styled-theming": "^2.2.2",
     "accept-language": "^3.0.18",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
@@ -13,12 +18,7 @@
     "react-intl": "^3.12.0",
     "react-scripts": "3.3.1",
     "styled-components": "^5.0.1",
-    "styled-theming": "^2.2.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/styled-components": "^4.4.2",
-    "@types/styled-theming": "^2.2.2"
+    "styled-theming": "^2.2.0"
   },
   "devDependencies": {
     "@types/bootstrap": "^4.3.1",

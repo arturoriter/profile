@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DarkTheme } from '../data/DarkTheme';
-import { useTheme } from '../ThemeManager';
-import { FormattedMessage } from 'react-intl';
+import BootstrapIcon from './BootstrapIcon';
 
 const StyledLink = styled.a`
   color: ${props => props.theme.button.textColor};
@@ -14,6 +12,7 @@ const StyledLink = styled.a`
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #cccccc;
+  cursor: pointer;
 
   :hover,
   :visited,
@@ -24,18 +23,12 @@ const StyledLink = styled.a`
   }
 `;
 
-const ThemeButton = () => {
-  const theme = useTheme();
-
+const PrintButton = () => {
   return (
-    <StyledLink className="non-printable" id="themeBtn" href="#" onClick={() => theme.toggle()}>
-      {theme.mode === DarkTheme ? (
-        <FormattedMessage id="THEME.LIGHT_MODE" />
-      ) : (
-        <FormattedMessage id="THEME.DARK_MODE" />
-      )}
+    <StyledLink className="non-printable" id="printBtn" href="#" onClick={() => window.print()}>
+      <BootstrapIcon name="print" />
     </StyledLink>
   );
 };
 
-export default ThemeButton;
+export default PrintButton;

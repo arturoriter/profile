@@ -17,12 +17,12 @@ const LinkedinBadge = ({ profileName }: LinkedinBadgeType) => {
   try {
     return (
       <StyledDiv
-        className={theme.mode.linkedinBadge}
+        className={`non-printable ${theme.mode.linkedinBadge}`}
         data-version="v1"
         data-size="small"
         data-locale="en_US"
         data-type="horizontal"
-        data-vanity="arturoriter"
+        data-vanity={profileName}
       />
     );
   } catch (e) {

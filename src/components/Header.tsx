@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Contacts, { ContactType } from './Contacts';
 import { Container, Row, Col } from 'react-bootstrap';
 import ThemeButton from './ThemeButton';
+import PrintButton from './PrintButton';
 
 const Name = styled.div`
   font-size: 3em;
@@ -67,6 +68,7 @@ const Header = ({ data }: HeaderListType) => {
           >
             <Contacts data={data.contacts} />
             <ThemeButton />
+            <PrintButton />
           </Col>
         </Row>
       </Container>

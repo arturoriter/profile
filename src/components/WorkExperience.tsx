@@ -135,7 +135,7 @@ const WorkExperience = ({ data }: WorkExperienceListType) => {
       <Title name="WORK_EXPERIENCE.TITLE" />
 
       {data.map((experience, index) => (
-        <div key={`experience-${index}`}>
+        <div key={`experience-${index}`} className="content-block">
           <Header
             jobTitle={experience.jobTitle}
             companyName={experience.company.name}

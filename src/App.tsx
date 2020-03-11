@@ -18,6 +18,43 @@ const StyledDiv = styled.div`
   color: ${props => props.theme.page.textColor};
   font-family: 'Lato-Light', 'Arial', 'Helvetica', sans-serif;
   text-align: justify;
+
+  @media screen {
+    .non-screen {
+      display: none !important;
+    }
+  }
+
+  @media print {
+    .non-printable {
+      display: none !important;
+    }
+
+    .content-block {
+      page-break-inside: avoid;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+    }
+
+    .body {
+      padding-right: 2cm;
+      padding-left: 2cm;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @page:first {
+      header {
+        position: fixed;
+        top: 0;
+      }
+    }
+  }
 `;
 
 const App = () => {
@@ -48,7 +85,7 @@ const App = () => {
             contacts: profile.contacts,
           }}
         />
-        <Container className="col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-7">
+        <Container className="col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-7 body">
           <Row>
             <Col>
               <Summary data={profile.summary} />

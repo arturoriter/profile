@@ -17,7 +17,7 @@ const StyledLink = styled.a`
   color: ${props => props.theme.footer.textColor};
 `;
 
-const DevelopedBy = styled.span`
+const StyledSpan = styled.span`
   font-size: 0.8em;
 
   @media (max-width: 575px) {
@@ -25,15 +25,29 @@ const DevelopedBy = styled.span`
   }
 `;
 
+const StyledPrintLink = styled.a`
+  font-size: 1.2em;
+  margin: 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+
+  :hover,
+  :visited,
+  :link,
+  :active {
+    color: ${props => props.theme.footer.textColor};
+  }
+`;
+
 const Footer = () => {
   return (
     <StyledFooter id="footer">
-      <Container>
+      <Container className="non-printable">
         <Row>
           <Col>
-            <DevelopedBy>
+            <StyledSpan>
               <FormattedMessage id="FOOTER.DEVELOPED_BY" />
-            </DevelopedBy>
+            </StyledSpan>
           </Col>
         </Row>
         <Row>
@@ -59,6 +73,29 @@ const Footer = () => {
             >
               <BootstrapIcon name="envelope" />
             </StyledLink>
+          </Col>
+        </Row>
+      </Container>
+      <Container className="non-screen">
+        <Row>
+          <Col>
+            <StyledPrintLink
+              href="https://linkedin.com/in/arturoriter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BootstrapIcon name="linkedin-square" />
+              https://linkedin.com/in/arturoriter
+            </StyledPrintLink>
+            |
+            <StyledPrintLink
+              href="mailto:arturo.riter@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BootstrapIcon name="envelope" />
+              arturo.riter@gmail.com
+            </StyledPrintLink>
           </Col>
         </Row>
       </Container>
