@@ -13,6 +13,20 @@ const loadAllComponents = () => {
   cy.get('#footer').should('exist');
 };
 
+const switchTheme = (backgroundColor: string, textColor: string) => {
+  cy.get('#app').should($div => {
+    expect($div).to.have.css(
+      'background-color',
+      Color(backgroundColor).string()
+    );
+    expect($div).to.have.css('color', Color(textColor).string());
+    expect($div).to.have.css(
+      'font-family',
+      'Lato-Light, Arial, Helvetica, sans-serif'
+    );
+  });
+};
+
 describe('Profile test', () => {
   it('Visits the profile page', () => {
     cy.visit('#');
@@ -23,41 +37,24 @@ describe('Profile test', () => {
   });
 
   it('Should have light theme css', () => {
-    cy.get('#app').should($div => {
-      expect($div).to.have.css(
-        'background-color',
-        Color(LightTheme.page.backgroundColor).string()
-      );
-      expect($div).to.have.css(
-        'color',
-        Color(LightTheme.page.textColor).string()
-      );
-      expect($div).to.have.css(
-        'font-family',
-        'Lato-Light, Arial, Helvetica, sans-serif'
-      );
-    });
+    switchTheme(LightTheme.page.backgroundColor, LightTheme.page.textColor);
   });
 
   it('Click on switch to dark mode button should change themes', () => {
-    cy.get('#themeBtn').click();
+    cy.checkAndClick('#themeBtn', 'Switch to Dark Mode');
     loadAllComponents();
   });
 
   it('Should have dark theme css', () => {
-    cy.get('#app').should($div => {
-      expect($div).to.have.css(
-        'background-color',
-        Color(DarkTheme.page.backgroundColor).string()
-      );
-      expect($div).to.have.css(
-        'color',
-        Color(DarkTheme.page.textColor).string()
-      );
-      expect($div).to.have.css(
-        'font-family',
-        'Lato-Light, Arial, Helvetica, sans-serif'
-      );
-    });
+    switchTheme(DarkTheme.page.backgroundColor, DarkTheme.page.textColor);
+  });
+
+  it('Click on switch to light mode button should change themes', () => {
+    cy.checkAndClick('#themeBtn', 'Switch to Light Mode');
+    loadAllComponents();
+  });
+
+  it('Should have light theme css', () => {
+    switchTheme(LightTheme.page.backgroundColor, LightTheme.page.textColor);
   });
 });
