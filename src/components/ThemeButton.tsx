@@ -1,8 +1,9 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
+
 import { DarkTheme } from '../data/DarkTheme';
 import { useTheme } from '../ThemeManager';
-import { FormattedMessage } from 'react-intl';
 
 const StyledLink = styled.a`
   color: ${props => props.theme.button.textColor};

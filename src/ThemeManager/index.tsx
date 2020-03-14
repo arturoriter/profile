@@ -1,7 +1,8 @@
 import React from 'react';
-import { ThemeContext } from '../types/ThemeContext';
+
 import { DarkTheme } from '../data/DarkTheme';
 import { LightTheme } from '../data/LightTheme';
+import { ThemeContext } from '../types/ThemeContext';
 
 const defaultMode = LightTheme;
 

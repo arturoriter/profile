@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-import Title from './Title';
-import BootstrapIcon from './BootstrapIcon';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
+
+import Title from './Title';
+import BootstrapIcon from './BootstrapIcon';
 
 const SmallMarginBottom = styled.div`
   margin-bottom: 0.5em;

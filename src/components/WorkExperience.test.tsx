@@ -1,4 +1,5 @@
 import React from 'react';
+
 import WorkExperience from './WorkExperience';
 import renderWithReactIntl from '../utils/renderWithReactIntl';
 

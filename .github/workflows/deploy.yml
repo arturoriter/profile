@@ -13,13 +13,18 @@ jobs:
       with:
         persist-credentials: false
 
-    - name: yarn install, build and test
+    - name: yarn install and test
       run: |
-        yarn install --production
-        yarn build --if-present
+        yarn install --frozen-lockfile
         yarn test
+        yarn test:e2e
       env: 
         CI: true
+
+    - name: yarn install production and build
+      run: |
+        yarn install --frozen-lockfile --production
+        yarn build --if-present
 
     - name: Deploy 🚀
       uses: crazy-max/ghaction-github-pages@v1
@@ -28,3 +33,8 @@ jobs:
         build_dir: build
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+    - name: yarn e2e production
+      run: |
+        yarn install --frozen-lockfile
+        yarn cy:prod

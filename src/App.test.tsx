@@ -1,10 +1,12 @@
 import React from 'react';
-import App from './App';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 import { IntlProvider } from 'react-intl';
+
+import App from './App';
 import { DarkTheme } from './data/DarkTheme';
 import { getMessages } from './utils/getMessages';
+
 const locale = 'en';
 const messages = getMessages(locale);
 

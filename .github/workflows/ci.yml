@@ -16,10 +16,10 @@ jobs:
     - name: Checkout 🛎️
       uses: actions/checkout@v2
 
-    - name: yarn install, build and test
+    - name: yarn install and test
       run: |
-        yarn install
-        yarn build --if-present
+        yarn install --frozen-lockfile
         yarn test
+        yarn test:e2e
       env: 
         CI: true

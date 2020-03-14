@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Languages from './Languages';
 import renderWithReactIntl from '../utils/renderWithReactIntl';
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import BootstrapIcon from './BootstrapIcon';
 
 const StyledDiv = styled.div`

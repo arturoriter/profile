@@ -1,8 +1,9 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import Title from './Title';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
+
+import Title from './Title';
 import { useTheme } from '../ThemeManager';
 
 const StyledDiv = styled.div`
