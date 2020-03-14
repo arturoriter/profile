@@ -18,6 +18,7 @@ jobs:
         yarn install --production
         yarn build --if-present
         yarn test
+        yarn test:e2e
       env: 
         CI: true
 
@@ -28,3 +29,6 @@ jobs:
         build_dir: build
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+    - name: yarn e2e on production
+      run: yarn cypress:prod
