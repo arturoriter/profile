@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
-import Summary from './components/Summary';
-import Skills from './components/Skills';
-import WorkExperience from './components/WorkExperience';
-import Education from './components/Education';
-import Certifications from './components/Certifications';
-import Languages from './components/Languages';
-import Footer from './components/Footer';
-import styled, { ThemeProvider } from 'styled-components';
-import profile from './data/profile.json';
 import { Container, Row, Col } from 'react-bootstrap';
+import styled, { ThemeProvider } from 'styled-components';
+
+import Certifications from './components/Certifications';
+import Education from './components/Education';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Languages from './components/Languages';
 import LinkedinBadge from './components/LinkedinBadge';
+import Skills from './components/Skills';
+import Summary from './components/Summary';
+import WorkExperience from './components/WorkExperience';
+
 import { useTheme } from './ThemeManager';
+
+import profile from './data/profile.json';
 
 const StyledDiv = styled.div`
   background-color: ${props => props.theme.page.backgroundColor};

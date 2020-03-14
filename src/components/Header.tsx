@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-import Contacts, { ContactType } from './Contacts';
 import { Container, Row, Col } from 'react-bootstrap';
+import styled from 'styled-components';
+
+import Contacts, { ContactType } from './Contacts';
 import ThemeButton from './ThemeButton';
 
 const Name = styled.div`

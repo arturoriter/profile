@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Contacts from './Contacts';
 import renderWithReactIntl from '../utils/renderWithReactIntl';
 

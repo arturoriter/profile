@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-import BootstrapIcon from './BootstrapIcon';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
+
+import BootstrapIcon from './BootstrapIcon';
 
 const StyledFooter = styled.footer`
   color: ${props => props.theme.footer.textColor};

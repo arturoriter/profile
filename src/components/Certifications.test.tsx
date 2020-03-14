@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Certifications from './Certifications';
 import renderWithReactIntl from '../utils/renderWithReactIntl';
 
