@@ -8,7 +8,7 @@
     "@testing-library/react": "^10.0.1",
     "@testing-library/user-event": "^10.0.0",
     "@types/styled-components": "^5.0.1",
-    "@types/styled-theming": "^2.2.2",
+    "@types/styled-theming": "^2.2.4",
     "accept-language": "^3.0.18",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
