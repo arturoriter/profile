@@ -10,7 +10,7 @@
     "@types/styled-components": "^5.1.0",
     "@types/styled-theming": "^2.2.2",
     "accept-language": "^3.0.18",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "font-awesome": "^4.7.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
