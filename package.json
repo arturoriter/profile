@@ -37,7 +37,7 @@
     "prettier": "^2.0.5",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.6",
-    "wait-on": "^5.0.1"
+    "wait-on": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
