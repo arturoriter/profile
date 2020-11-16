@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://arturoriter.github.io/profile/",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^10.0.1",
     "@testing-library/user-event": "^12.0.11",
     "@types/styled-components": "^5.1.1",
