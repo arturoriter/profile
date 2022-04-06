@@ -18,7 +18,7 @@
   "skills": [
     {
       "name": "Languages",
-      "description": "Java, Groovy"
+      "description": "Python, Java, Groovy"
     },
     {
       "name": "Cloud Computing",
@@ -30,11 +30,11 @@
     },
     {
       "name": "Backend",
-      "description": "Spring Boot, Spring Cloud, JPA, jOOQ, Flyway, Netflix Zuul"
+      "description": "FastAPI, NATS, AsyncIO, Boto3, Spring Boot, Spring Cloud, JPA, jOOQ, Flyway, Netflix Zuul"
     },
     {
       "name": "Ops tools",
-      "description": "Terraform, Docker, Jenkins"
+      "description": "Kubernetes, Helm, Terraform, Docker, Jenkins"
     },
     {
       "name": "Build automation tools",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Testing frameworks",
-      "description": "Spock, Geb, JUnit, Cucumber, Mockito, Wiremock, Pact"
+      "description": "Pytest, Pytest-BDD (Gherkin), Spock, Geb, JUnit, Cucumber, Mockito, Wiremock, Pact"
     },
     {
       "name": "Agile",
@@ -54,23 +54,40 @@
     },
     {
       "name": "Code Quality",
-      "description": "SonarQube, lint, OWASP"
+      "description": "Snyk, SonarCloud, Linter, OWASP"
     }
   ],
   "workExperience": [
+    {
+      "jobTitle": "LEAD CLOUD ENGINEER",
+      "company": {
+        "name": "OutSystems S.A.",
+        "link": "https://www.outsystems.com/?sc_lang=en",
+        "location": "Remote",
+        "info": "OutSystems is a low-code platform which provides the tools for companies to develop, deploy and manage omnichannel enterprise applications."
+      },
+      "startDate": "Ago 2020",
+      "endDate": "Present",
+      "description": [
+        "Lead cloud engineer, building high-available API's and services using Kubernetes and Helm and managing all the infrastructure by code through Terraform.",
+        "Working on the entire system lifecycle, from requirements and architecture, coding and deployment, to support.",
+        "Focused on quality, building several layers of testing (unit, component, integration, e2e, contract tests) and using analysis tools like SonarCloud and Snyk."
+      ],
+      "teckStack": "Kubernetes, Helm, NATS, Gloo, AWS, Terraform, Docker, Azure DevOps, Github workflows, Scrum, Python, FastAPI, AsyncIO, Pytest, Pytest-BDD (Gherkin), Pact."
+    },
     {
       "jobTitle": "LEAD SOFTWARE ENGINEER",
       "company": {
         "name": "ELEMENT Insurance AG",
         "link": "https://www.element.in/en",
         "location": "Berlin, Germany",
-        "info": "Element is the leading white-label product factory for insurance and a leader in insurance digitalization. It offers a unique technology platform (‘Insurance as a Platform’) with a focus on the B2B2X value chain."
+        "info": "Element is the leading white-label product factory for insurance and a leader in insurance digitalization. It offers a unique technology platform ('Insurance as a Platform') with a focus on the B2B2X value chain."
       },
       "startDate": "Apr 2017",
-      "endDate": "Present",
+      "endDate": "Jul 2020",
       "description": [
-        "Led software engineers, working on all aspects of the team leader role from recruiting and mentoring to agile advocate and quality assurance throughout promoting good practices and strategies",
-        "Built,architected, developed and maintained many services and company tools like CI/CD pipeline, infrastructure modules, microservices and system tests, smoke tests and contract pact tests solutions",
+        "Led software engineer, working on all aspects of the team leader role from recruiting and mentoring to agile advocate and quality assurance throughout promoting good practices and strategies",
+        "Built, architected, developed and maintained many services and company tools like CI/CD pipeline, infrastructure modules, microservices and system tests, smoke tests and contract pact tests solutions",
         "Integrated with Stripe, creating a robust payments solution handling recurring charges, refunds, disputes, dunning, and payment accounting in an event-driven architecture",
         "Reduced partner onboarding time from a complex, error-prone, time consuming and manual work process to a totally automated and safe process",
         "Applied NoOps principles through automated deployment and infrastructure-as-a-code as part of the software lifecycle to assure quality and resilience in the cloud"
@@ -88,7 +105,7 @@
       "startDate": "Oct 2014",
       "endDate": "Apr 2017",
       "description": [
-        "Led engineer team in a distributed scrum team, designed and developed tools used by brokers to manage/administer financial assets (such as bonds, stocks) with a focus on reactive principles"
+        "Lead engineer team in a distributed scrum team, designed and developed tools used by brokers to manage/administer financial assets (such as bonds, stocks) with a focus on reactive principles"
       ],
       "teckStack": "Java 8, Akka, JAX-B, JMS, Maven, Mockito, JUnit, Cucumber, MyBatis, Derby DB, PostgreSQL, Wildfly, Jenkins, XL-Deploy, Scrum"
     },
@@ -113,7 +130,7 @@
         "name": "Automatic Data Processing, Inc (ADP)",
         "link": "https://www.adp.com",
         "location": "Porto Alegre, Brazil",
-        "info": "ADP is an American provider of human resources management software and services. It is the largest provider of HR services in North America, Europe, Latin America and the Pacific Rim."
+        "info": "ADP is an American provider of human resources management software and services. It is the largest provider of HR services in North America, Europe, Latin America and the Pacific Rim."
       },
       "startDate": "Jan 2013",
       "endDate": "Apr 2014",
@@ -143,7 +160,7 @@
         "name": "Motorola Mobility",
         "link": "https://www.motorola.com",
         "location": "São Paulo, Brazil",
-        "info": "Motorola Mobility is a consumer electronics and telecommunications company owned by Lenovo. Primarily manufactures smartphones and other mobile devices running the Android operating system."
+        "info": "Motorola Mobility is a consumer electronics and telecommunications company owned by Lenovo. Primarily manufactures smartphones and other mobile devices running the Android operating system."
       },
       "startDate": "Mar 2010",
       "endDate": "Feb 2011",
@@ -225,7 +242,7 @@
     {
       "course": "Computer Engineer",
       "institution": "Universidade São Francisco",
-      "degree": "Bachelor’s Degree",
+      "degree": "Bachelor's Degree",
       "startDate": 2002,
       "endDate": 2006,
       "thesisTopic": "Full Honors. Distributed programming technologies in Java"
@@ -239,6 +256,10 @@
     }
   ],
   "certifications": [
+    {
+      "name": "Terraform Associate",
+      "institution": "HashiCorp"
+    },
     {
       "name": "AWS Certified Solutions Architect",
       "institution": "Pluralsight"
