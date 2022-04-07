@@ -1,8 +1,8 @@
 {
   "name": "Arturo Riter",
   "linkedinProfileName": "arturoriter",
-  "headline": "Lead Senior Engineer / Senior Software Engineer",
-  "summary": "More than 18 years of hands-on experience as a Software Engineer in different sectors. Bachelor's degree in Computer Engineering. Enthusiastic about agile methodologies. Highly motivated and committed to quality and excellence. Interested in DevSecOps, cloud computing and infrastructure-as-a-code.",
+  "headline": "Lead Cloud Engineer / Senior Software Engineer",
+  "summary": "More than 20 years of hands-on experience as a Software Engineer in different sectors. Bachelor's degree in Computer Engineering. Enthusiastic about agile methodologies. Highly motivated and committed to quality and excellence. Interested in DevSecOps, cloud computing and infrastructure-as-a-code.",
   "contacts": [
     {
       "icon": "linkedin",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Testing frameworks",
-      "description": "Pytest, Pytest-BDD (Gherkin), Spock, Geb, JUnit, Cucumber, Mockito, Wiremock, Pact"
+      "description": "Pytest, Pytest-BDD (Gherkin), Spock, Geb, JUnit, Cucumber, Mockito, Moto, Wiremock, Pact"
     },
     {
       "name": "Agile",
@@ -257,32 +257,8 @@
   ],
   "certifications": [
     {
-      "name": "Terraform Associate",
+      "name": "HashiCorp Certified: Terraform Associate",
       "institution": "HashiCorp"
-    },
-    {
-      "name": "AWS Certified Solutions Architect",
-      "institution": "Pluralsight"
-    },
-    {
-      "name": "AWS Certified Solutions Architect",
-      "institution": "Udemy"
-    },
-    {
-      "name": "Demystifying AWS Certified Solutions Architect",
-      "institution": "Pluralsight"
-    },
-    {
-      "name": "ES6 Training",
-      "institution": "Pluralsight"
-    },
-    {
-      "name": "React: The Big Picture",
-      "institution": "Pluralsight"
-    },
-    {
-      "name": "React: Getting Started",
-      "institution": "Pluralsight"
     },
     {
       "name": "Certified Professional Scrum Master I",
